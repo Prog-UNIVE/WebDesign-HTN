@@ -1,0 +1,33 @@
+{
+  "name": "CarSharing-HTN",
+  "description": "HTN Web template fo the Car Sharing project",
+  "main": "./dist/index.html",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Prog-UNIVE/WebDesign-HTN",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Yamm3": "yamm3#^1.1.0",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2",
+    "nouislider": "^9.0.0",
+    "isotope": "^3.0.1",
+    "jquery-form-validator": "^2.3.44",
+    "jquery.easy-pie-chart": "^2.1.6",
+    "select2": "^4.0.3",
+    "wow": "wowjs#^1.1.2",
+    "waypoints": "^4.0.1",
+    "flexslider": "^2.6.3"
+  }
+}
