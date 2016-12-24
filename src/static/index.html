@@ -38,34 +38,36 @@
                 </button>
             </div>
             <!-- TODO - menù principale / da fixare (centrate tutti gli elementi tranne "area riservata"); quando collapse risistemare tutti gli elementi al centro (compresi sottomenù) -->
-            <div class="collapse navbar-collapse text-center" id="main-menu">
+            <div class="collapse navbar-collapse" id="main-menu">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">News</a></li>
+                    <li class="active"><a class="text-center" href="#">Home</a></li>
+                    <li><a class="text-center" href="#">News</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
                            aria-expanded="false">Come funziona<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Assicurazione</a></li>
+                            <li><a class="text-center" href="#">Assicurazione</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Orari prenotazione</a></li>
+                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Carburante</a></li>
+                            <li><a class="text-center" href="#">Carburante</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Prenotazione</a></li>
-                    <li><a href="#">Servizi</a></li>
-                    <li><a href="#">Chi siamo</a></li>
+                    <li><a class="text-center" href="#">FAQ</a></li>
+                    <li><a class="text-center" href="#">Prenotazione</a></li>
+                    <li><a class="text-center" href="#">Servizi</a></li>
+                    <li><a class="text-center" href="#">Chi siamo</a></li>
                 </ul>
-                <ul class="nav navbar-nav pull-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
                            aria-expanded="false">Area riservata<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Login-in</a></li>
+                            <li><a class="text-center" href="#">Login-in</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Registrazione</a></li>
+                            <li><a class="text-center" href="#">Registrazione</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -80,40 +82,41 @@
     <section class="">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">  <!-- TODO - Sistemare componenti in low-size screen -->
-                    <div class="text-center col-xs-12 text-center">
-                        <ul class="list-inline text-center col-xs-12">
-                            <li class="col-sm-2">
-                                <a href="#">
-                                    <img src="https://placehold.it/170x250" alt="Foto" class="img-fluid">
-                                    <p>all brands</p>
-                                </a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href="#">
-                                    <img src="https://placehold.it/170x250" alt="Foto" class="img-fluid">
-                                    <p>free support</p>
-                                </a>
-                            </li>
-                            <li class="col-sm-4">
-                                <!-- TODO - Allineare centralmente solo questo componente verticalemnte-->
-                                <p class="lead">welcome to
-                                <h1>autozone</h1><strong>the online autos world</strong></p>
-                            </li>
-                            <li class="col-sm-2">
-                                <a class="" href="#">
-                                    <img src="https://placehold.it/170x250" alt="Foto" class="img-fluid">
-                                    <p>dealership</p>
-                                </a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a class="" href="#">
-                                    <img src="https://placehold.it/170x250" alt="Foto" class="img-fluid">
-                                    <p>affordable</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="text-center col-sm-12 col-md-4 col-md-push-4">
+                    <p class="lead">welcome to</p>
+                    <h1>autozone</h1><strong>the online autos world</strong>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-pull-4">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <img src="https://placehold.it/170x250?text=a1" alt="Foto" class="img-fluid">
+                                <p>all brands</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://placehold.it/170x250?text=a2" alt="Foto" class="img-fluid">
+                                <p>free support</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a class="" href="#">
+                                <img src="https://placehold.it/170x250?text=b1" alt="Foto" class="img-fluid">
+                                <p>dealership</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="#">
+                                <img src="https://placehold.it/170x250?text=b2" alt="Foto" class="img-fluid">
+                                <p>affordable</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
