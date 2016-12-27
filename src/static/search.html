@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="">
+    <!-- Top menu -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <!-- Logo + impostazioni per low-size -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
+                </a>
+                <button type="button" class="navbar-toggle text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- TODO - menù principale / da fixare (centrate tutti gli elementi tranne "area riservata"); quando collapse risistemare tutti gli elementi al centro (compresi sottomenù) -->
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="text-center" href="#">Home</a></li>
+                    <li><a class="text-center" href="#">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Carburante</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="text-center" href="#">FAQ</a></li>
+                    <li><a class="text-center" href="#">Prenotazione</a></li>
+                    <li><a class="text-center" href="#">Servizi</a></li>
+                    <li><a class="text-center" href="#">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Registrazione</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="jumbotron text-center">
+            <h1>Risultato ricerca</h1>
+        </div>
+        <div class="col-xs-10 col-sm-8 col-xs-push-1 col-sm-push-2">
+            <div class="row">
+                <form role="form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="testo" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Cerca</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <form role="form"> <!-- TODO - allineare i checkbox verticalmente -->
+                    <h3>Filtra per:</h3>
+                    <div class="checkbox text-center">
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 1</label>
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 2</label>
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 3</label>
+                    </div>
+                    <div class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0 text-center">
+                        <button class="btn btn-default" type="submit">Filtra</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <h3>Elenco risultati:</h3>
+            <ul class="list-unstyled">
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 1</a></li>
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 2</a></li>
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">  <!-- TODO - aggiungere link site map e sistemare -->
+        <section>
+            <div class="container text-center">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="">auto zone</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="">: showroom location :</p>
+                        <p class="">indirizzo showroom</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="col-xs-12 list-inline">
+                            <li class="col-xs-3"><p>phone: 1234567</p></li>
+                            <li class="col-xs-3"><p>fax: 1234567</p></li>
+                            <li class="col-xs-3"><p>email: 1234567@gmail.com</p></li>
+                            <li class="col-xs-3"><p>orario: lun -ven :: 9-18</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-inline">
+                            <li class="col-xs-1"></li>
+                            <li class="col-xs-2"><a href="#">fb</a></li>
+                            <li class="col-xs-2"><a href="#">twitter</a></li>
+                            <li class="col-xs-2"><a href="#">yt</a></li>
+                            <li class="col-xs-2"><a href="#">instagram</a></li>
+                            <li class="col-xs-2"><a href="#">g-plus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center"><a class="" href="index.html">top</a></div>
+        <div class="text-center">Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved</div>
+    </footer>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
