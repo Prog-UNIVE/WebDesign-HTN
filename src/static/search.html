@@ -75,9 +75,44 @@
         </div>
     </nav>
 
-    <section class="">
+    <div class="row">
+        <div class="jumbotron text-center">
+            <h1>Risultato ricerca</h1>
+        </div>
+        <div class="col-xs-10 col-sm-8 col-xs-push-1 col-sm-push-2">
+            <div class="row">
+                <form role="form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="testo" placeholder="Search for...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Cerca</button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <form role="form"> <!-- TODO - allineare i checkbox verticalmente -->
+                    <h3>Filtra per:</h3>
+                    <div class="checkbox text-center">
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 1</label>
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 2</label>
+                            <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 3</label>
+                    </div>
+                    <div class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0 text-center">
+                        <button class="btn btn-default" type="submit">Filtra</button>
+                    </div>
+                </form>
+            </div>
 
-    </section>
+
+            <h3>Elenco risultati:</h3>
+            <ul class="list-unstyled">
+                <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 1</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 2</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 3</a></li>
+            </ul>
+        </div>
+    </div>
 
     <footer class="footer">  <!-- TODO - aggiungere link site map e sistemare -->
         <section>
