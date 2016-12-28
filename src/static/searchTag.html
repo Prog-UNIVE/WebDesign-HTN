@@ -8,8 +8,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,154 +17,185 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<div class="">
-    <!-- Top menu -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-
-            <!-- Logo + impostazioni per low-size -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
-                </a>
-                <button type="button" class="navbar-toggle text-center"
-                        data-toggle="collapse" data-target="#main-menu">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- TODO - menù principale / da fixare (centrate tutti gli elementi tranne "area riservata"); quando collapse risistemare tutti gli elementi al centro (compresi sottomenù) -->
-            <div class="collapse navbar-collapse" id="main-menu">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a class="text-center" href="#">Home</a></li>
-                    <li><a class="text-center" href="#">News</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">Come funziona<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="text-center" href="#">Assicurazione</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Carburante</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="text-center" href="#">FAQ</a></li>
-                    <li><a class="text-center" href="#">Prenotazione</a></li>
-                    <li><a class="text-center" href="#">Servizi</a></li>
-                    <li><a class="text-center" href="#">Chi siamo</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">Area riservata<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="text-center" href="#">Login-in</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Registrazione</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<body id="body-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<nav class="navbar yamm navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
+            </a>
+            <button type="button" class="navbar-toggle text-center"
+                    data-toggle="collapse" data-target="#main-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-
-    <div class="row">
-        <div class="jumbotron text-center">
-            <h1>Risultato ricerca TAG</h1>
-        </div>
-        <div class="col-xs-10 col-sm-8 col-xs-push-1 col-sm-push-2">
-            <div class="row">
-                <form role="form">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="testo" placeholder="Search for...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="submit">Cerca</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-            <div class="row">
-                <form role="form"> <!-- TODO - allineare i checkbox verticalmente -->
-                    <h3>Filtra per:</h3>
-                    <div class="checkbox text-center">
-                        <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">News</label>
-                        <label class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0"><input type="checkbox" value="">Option 2</label>
-                    </div>
-                    <div class="col-xs-8 col-sm-3 col-md-2 col-xs-push-2 col-sm-push-0 text-center">
-                        <button class="btn btn-default" type="submit">Filtra</button>
-                    </div>
-                </form>
-            </div>
-
-
-            <h3>Elenco risultati:</h3>
-            <ul class="list-unstyled">
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 1</a></li>
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 2</a></li>
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 3</a></li>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="text-center" href="#">Home</a></li>
+                <li><a class="text-center" href="#">News</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Come funziona<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Assicurazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Carburante</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-center" href="#">FAQ</a></li>
+                <li><a class="text-center" href="#">Prenotazione</a></li>
+                <li><a class="text-center" href="#">Servizi</a></li>
+                <li><a class="text-center" href="#">Chi siamo</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Area riservata<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Login-in</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Registrazione</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                        <span class="sr-only">Cerca</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <form method="get" class="form-search">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="search">Search</label>
+                                        <input id="search" class="form-control form-search__input"
+                                               placeholder="Cerca..." type="text">
+                                    </div>
+                                    <button class="btn btn-default form-search__submit" type="submit">
+                                        <i class="icon fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
-
-    <footer class="footer">  <!-- TODO - aggiungere link site map e sistemare -->
-        <section>
-            <div class="container text-center">
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="">auto zone</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="">: showroom location :</p>
-                        <p class="">indirizzo showroom</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="col-xs-12 list-inline">
-                            <li class="col-xs-3"><p>phone: 1234567</p></li>
-                            <li class="col-xs-3"><p>fax: 1234567</p></li>
-                            <li class="col-xs-3"><p>email: 1234567@gmail.com</p></li>
-                            <li class="col-xs-3"><p>orario: lun -ven :: 9-18</p></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="list-inline">
-                            <li class="col-xs-1"></li>
-                            <li class="col-xs-2"><a href="#">fb</a></li>
-                            <li class="col-xs-2"><a href="#">twitter</a></li>
-                            <li class="col-xs-2"><a href="#">yt</a></li>
-                            <li class="col-xs-2"><a href="#">instagram</a></li>
-                            <li class="col-xs-2"><a href="#">g-plus</a></li>
-                        </ul>
-                    </div>
-                </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>Risultato ricerca TAG</h1>
+</div>
+<div class="container">
+    <form role="form">
+        <div class="input-group">
+            <input type="text" class="form-control" id="testo" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Cerca</button>
+             </span>
+        </div>
+        <div class="form-inline">
+            <h3>Filtra per:</h3>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="news">
+                    News
+                </label>
             </div>
-        </section>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="faq">
+                    Faq
+                </label>
+            </div>
+        </div>
+    </form>
 
-        <div class="text-center"><a class="" href="index.html">top</a></div>
-        <div class="text-center">Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved</div>
-    </footer>
+    <h3>Elenco risultati:</h3>
+    <ul class="list-unstyled">
+        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 1</a></li>
+        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 2</a></li>
+        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 3</a></li>
+    </ul>
 </div>
 
+<footer class="footer wow bounceInUp" data-wow-duration="2s">
+    <section class="section section-content bg-secondary footer-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="footer-title">auto <span class="text-primary">zone</span></h2>
+                    <div class="decor-1 decor-1_mod-b"></div>
+                </div>
+            </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-secondary">: showroom location :</p>
+                    <p>32 Market St.128, Deeja Town, Florida, CA 12345</p>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <ul class="col-xs-12 list-inline">
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">phone:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">fax:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">email:</span>
+                        1234567@gmail.com
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">orario:</span> lun-ven ::
+                        9-18
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="social-links list-inline">
+                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
+                        </li>
+                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="#"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="top">
+        <div class="top-container">
+            <a class="text-center scroll" href="#body-top">
+                <div class="top-triangle"></div>
+                <span>Top</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved
+    </div>
+</footer>
+
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
 </body>
 </html>
 

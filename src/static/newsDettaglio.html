@@ -8,8 +8,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,166 +17,270 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<div class="">
-    <!-- Top menu -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-
-            <!-- Logo + impostazioni per low-size -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
-                </a>
-                <button type="button" class="navbar-toggle text-center"
-                        data-toggle="collapse" data-target="#main-menu">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- TODO - menù principale / da fixare (centrate tutti gli elementi tranne "area riservata"); quando collapse risistemare tutti gli elementi al centro (compresi sottomenù) -->
-            <div class="collapse navbar-collapse" id="main-menu">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a class="text-center" href="#">Home</a></li>
-                    <li><a class="text-center" href="#">News</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">Come funziona<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="text-center" href="#">Assicurazione</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Carburante</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="text-center" href="#">FAQ</a></li>
-                    <li><a class="text-center" href="#">Prenotazione</a></li>
-                    <li><a class="text-center" href="#">Servizi</a></li>
-                    <li><a class="text-center" href="#">Chi siamo</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">Area riservata<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="text-center" href="#">Login-in</a></li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="#">Registrazione</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<body id="body-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<nav class="navbar yamm navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
+            </a>
+            <button type="button" class="navbar-toggle text-center"
+                    data-toggle="collapse" data-target="#main-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-
-    <div class="row">
-        <div class="jumbotron text-center">
-            <h1>Singola News</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-10 col-md-7 col-xs-push-1 text-justify">
-            <h2>Titolo news</h2>
-            <p class="text-muted"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp31 Gennaio 2017</p>
-            <img src="https://placehold.it/900x300?text=c1" alt="Foto" class="img-responsive center-block">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac habitasse platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis non velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim. Donec tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel, rhoncus id sapien.
-            </p>
-            <p>
-                Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis augue. Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus purus elit, mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id lectus. Fusce quis vulputate augue, ac pellentesque augue.
-            </p>
-            <h3>Titolo paragrafo 1</h3>
-            <p>
-                Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis augue. Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus purus elit, mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id lectus. Fusce quis vulputate augue, ac pellentesque augue.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac habitasse platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis non velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim. Donec tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel, rhoncus id sapien.
-            </p>
-            <blockquote>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac habitasse platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis non velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim. Donec tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel, rhoncus id sapien.
-                </p>
-                <footer>Autore citazione 1</footer>
-            </blockquote>
-            <hr>
-            <ul class="pager">
-                <li class="previous"><a href="#"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspNews precedente</a></li>
-                <li class="next"><a href="#">News successiva&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="text-center" href="#">Home</a></li>
+                <li><a class="text-center" href="#">News</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Come funziona<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Assicurazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Carburante</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-center" href="#">FAQ</a></li>
+                <li><a class="text-center" href="#">Prenotazione</a></li>
+                <li><a class="text-center" href="#">Servizi</a></li>
+                <li><a class="text-center" href="#">Chi siamo</a></li>
             </ul>
-            <hr>
-        </div>
-        <div class="col-xs-10 col-md-3 col-xs-push-1">  <!-- TODO - spaziare gli elementi "li" tra di loro -->
-            <div class="well">
-                <h2>TAG</h2>
-                <hr>
-                <ul class="list-unstyled">
-                    <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Tag 1</a></li>
-                    <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Tag 2</a></li>
-                    <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Tag 3</a></li>
-                    <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Tag 4</a></li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Area riservata<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Login-in</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Registrazione</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                        <span class="sr-only">Cerca</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <form method="get" class="form-search">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="search">Search</label>
+                                        <input id="search" class="form-control form-search__input"
+                                               placeholder="Cerca..." type="text">
+                                    </div>
+                                    <button class="btn btn-default form-search__submit" type="submit">
+                                        <i class="icon fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
 
-    <footer class="footer">  <!-- TODO - aggiungere link site map e sistemare -->
-        <section>
-            <div class="container text-center">
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="">auto zone</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="">: showroom location :</p>
-                        <p class="">indirizzo showroom</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="col-xs-12 list-inline">
-                            <li class="col-xs-3"><p>phone: 1234567</p></li>
-                            <li class="col-xs-3"><p>fax: 1234567</p></li>
-                            <li class="col-xs-3"><p>email: 1234567@gmail.com</p></li>
-                            <li class="col-xs-3"><p>orario: lun -ven :: 9-18</p></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="list-inline">
-                            <li class="col-xs-1"></li>
-                            <li class="col-xs-2"><a href="#">fb</a></li>
-                            <li class="col-xs-2"><a href="#">twitter</a></li>
-                            <li class="col-xs-2"><a href="#">yt</a></li>
-                            <li class="col-xs-2"><a href="#">instagram</a></li>
-                            <li class="col-xs-2"><a href="#">g-plus</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="text-center"><a class="" href="index.html">top</a></div>
-        <div class="text-center">Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved</div>
-    </footer>
+<div class="jumbotron text-center">
+    <h1>Singola News</h1>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <main class="main-content">
+                <h2>Titolo news</h2>
+                <p class="text-muted"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp31 Gennaio
+                    2017
+                </p>
+                <img src="https://placehold.it/900x300?text=c1" alt="Foto" class="img-responsive center-block">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
+                    habitasse
+                    platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis
+                    non
+                    velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim.
+                    Donec
+                    tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel,
+                    rhoncus
+                    id
+                    sapien.
+                </p>
+                <p>
+                    Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis
+                    augue.
+                    Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus
+                    purus
+                    elit,
+                    mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id
+                    lectus.
+                    Fusce quis vulputate augue, ac pellentesque augue.
+                </p>
+                <h3>Titolo paragrafo 1</h3>
+                <p>
+                    Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis
+                    augue.
+                    Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus
+                    purus
+                    elit,
+                    mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id
+                    lectus.
+                    Fusce quis vulputate augue, ac pellentesque augue.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
+                    habitasse
+                    platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis
+                    non
+                    velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim.
+                    Donec
+                    tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel,
+                    rhoncus
+                    id
+                    sapien.
+                </p>
+                <blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
+                        habitasse
+                        platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas
+                        iaculis
+                        non
+                        velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus
+                        enim.
+                        Donec tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis
+                        vel,
+                        rhoncus id sapien.
+                    </p>
+                    <footer>Autore citazione 1</footer>
+                </blockquote>
+                <hr>
+                <ul class="pager">
+                    <li class="previous"><a href="#"><span class="glyphicon glyphicon-arrow-left"
+                                                           aria-hidden="true"></span>&nbspNews
+                        precedente</a></li>
+                    <li class="next"><a href="#">News successiva&nbsp<span class="glyphicon glyphicon-arrow-right"
+                                                                           aria-hidden="true"></span></a></li>
+                </ul>
+                <hr>
+            </main>
+        </div>
+        <div class="col-md-4">
+            <aside class="sidebar">  <!-- TODO - spaziare gli elementi "li" tra di loro -->
+                <div class="widget">
+                    <h3 class="widget-title">TAG</h3>
+                    <div class="decor-1">
+                        <div class="widget-content">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 3
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </aside>
+        </div>
+    </div>
+</div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<footer class="footer wow bounceInUp" data-wow-duration="2s">
+    <section class="section section-content bg-secondary footer-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="footer-title">auto <span class="text-primary">zone</span></h2>
+                    <div class="decor-1 decor-1_mod-b"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-secondary">: showroom location :</p>
+                    <p>32 Market St.128, Deeja Town, Florida, CA 12345</p>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <ul class="col-xs-12 list-inline">
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">phone:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">fax:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">email:</span>
+                        1234567@gmail.com
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">orario:</span> lun-ven ::
+                        9-18
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="social-links list-inline">
+                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
+                        </li>
+                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="#"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="top">
+        <div class="top-container">
+            <a class="text-center scroll" href="#body-top">
+                <div class="top-triangle"></div>
+                <span>Top</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved
+    </div>
+</footer>
+
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
 </body>
 </html>
 
