@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<nav class="navbar yamm navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
+            </a>
+            <button type="button" class="navbar-toggle text-center"
+                    data-toggle="collapse" data-target="#main-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="text-center" href="#">Home</a></li>
+                <li><a class="text-center" href="#">News</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Come funziona<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Assicurazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Carburante</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-center" href="#">FAQ</a></li>
+                <li><a class="text-center" href="#">Prenotazione</a></li>
+                <li><a class="text-center" href="#">Servizi</a></li>
+                <li><a class="text-center" href="#">Chi siamo</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">Area riservata<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="text-center" href="#">Login-in</a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">Registrazione</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                        <span class="sr-only">Cerca</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <form method="get" class="form-search">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="search">Search</label>
+                                        <input id="search" class="form-control form-search__input"
+                                               placeholder="Cerca..." type="text">
+                                    </div>
+                                    <button class="btn btn-default form-search__submit" type="submit">
+                                        <i class="icon fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>Registrazione</h1>
+</div>
+<div class="container">
+    <div class="col-sm-10 col-sm-push-1">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="signup.html">Prima</a></li>
+            <li class="active">Seconda fase registrazione</li>
+        </ol>
+        <form action="#" role="form" class="well">
+            <h3>Recapiti</h3>
+            <div class="form-group col-md-6">
+                <label for="number">Numero cellulare</label>
+                <input id="number" type="text" class="form-control" placeholder="Numero del cellulare" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fisso">Numero Tel. Fisso</label>
+                <input id="fisso" type="text" class="form-control" placeholder="Numero tel. fisso" required>
+            </div>
+            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
+                <div class="form-group col-xs-9">
+                    <label for="comune">Comune di residenza</label>
+                    <input id="comune" type="text" class="form-control" placeholder="Comune residenza" required>
+                </div>
+                <div class="form-group col-xs-3">
+                    <label for="cap">CAP</label>
+                    <input id="cap" type="text" class="form-control" placeholder="CAP" required>
+                </div>
+            </div>
+            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
+                <div class="form-group col-xs-9">
+                    <label for="idnResidenza">Indirizzo residenza</label>
+                    <input id="idnResidenza" type="text" class="form-control" placeholder="Indirizzo residenza" required>
+                </div>
+                <div class="form-group col-xs-3">
+                    <label for="idnResidenza">Numero</label>
+                    <input id="numeroResidenza" type="text" class="form-control" placeholder="N°" required>
+                </div>
+            </div>
+            <h3>Recapiti per la fatturazione</h3>
+            <div class="form-group col-xs-12">
+                <div class="checkbox">
+                    <label><input type="checkbox" required>Utilizza lo stesso indirizzo come domicilio fiscale per l'intestazione delle fatture</a></label>
+                </div>
+            </div>
+            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
+                <div class="form-group col-xs-9">
+                    <label for="comuneF">Comune di residenza</label>
+                    <input id="comuneF" type="text" class="form-control" placeholder="Comune residenza" required>
+                </div>
+                <div class="form-group col-xs-3">
+                    <label for="capF">CAP</label>
+                    <input id="capF" type="text" class="form-control" placeholder="CAP" required>
+                </div>
+            </div>
+            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
+                <div class="form-group col-xs-9">
+                    <label for="idnResidenzaF">Indirizzo residenza</label>
+                    <input id="idnResidenzaF" type="text" class="form-control" placeholder="Indirizzo residenza" required>
+                </div>
+                <div class="form-group col-xs-3">
+                    <label for="idnResidenzaF">Numero</label>
+                    <input id="numeroResidenzaF" type="text" class="form-control" placeholder="N°" required>
+                </div>
+            </div>
+            <ul class="pager">
+                <li class="previous"><a href="signup.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrecendente</a></li>
+                <li class="next"><a href="#" onclick="form.submit();">Successiva&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+            </ul>
+        </form>
+        <hr>
+
+        <hr>
+    </div>
+</div>
+
+<div class="jumbotron text-center">
+    <h2>Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-primary btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
+</div>
+
+<footer class="footer wow bounceInUp" data-wow-duration="2s">
+    <section class="section section-content bg-secondary footer-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="footer-title">auto <span class="text-primary">zone</span></h2>
+                    <div class="decor-1 decor-1_mod-b"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-secondary">: showroom location :</p>
+                    <p>32 Market St.128, Deeja Town, Florida, CA 12345</p>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <ul class="col-xs-12 list-inline">
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">phone:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">fax:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">email:</span>
+                        1234567@gmail.com
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">orario:</span> lun-ven ::
+                        9-18
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="social-links list-inline">
+                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
+                        </li>
+                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="#"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="top">
+        <div class="top-container">
+            <a class="text-center scroll" href="#body-top">
+                <div class="top-triangle"></div>
+                <span>Top</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyrights 2015 - 2016 <a class="" href="#">autozone</a> - All rights reserved
+    </div>
+</footer>
+
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
+</body>
+</html>
+
+
 
