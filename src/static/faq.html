@@ -482,7 +482,7 @@
 
         <div class="jumbotron text-center">
             <h3>Non hai trovato la risposta che cercavi?</h3>
-            <p><a class="btn btn-primary btn-lg" href="aboutUs.html" role="button">Contatta il servizio clienti</a></p>
+            <p><a class="btn btn-primary btn-lg" href="contactUs.html" role="button">Contatta il servizio clienti</a></p>
         </div>
     </section>
 
@@ -543,20 +543,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script>
-        function changeIcon(elem){
-                var x = $(elem).attr("id");
-
-                $(("#collapse"+x).toString()).on("show.bs.collapse", function(){
-                    $(("#span"+x).toString()).removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
-                });
-
-                $(("#collapse"+x).toString()).on("hide.bs.collapse", function(){
-                    $(("#span"+x).toString()).removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
-                });
-        }
-
+    function changeIcon(elem){
+        var x = $(elem).attr("id");
+        $(("#collapse"+x).toString()).on("show.bs.collapse", function(){
+            $(("#span"+x).toString()).removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+        });
+        $(("#collapse"+x).toString()).on("hide.bs.collapse", function(){
+            $(("#span"+x).toString()).removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+        });
+    }
 </script>
 
 </body>
 </html>
-
