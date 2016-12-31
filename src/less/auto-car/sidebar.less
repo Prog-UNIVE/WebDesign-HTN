@@ -49,13 +49,6 @@
     }
   }
 
-  /*
-   * TODO - Override slider theme instead of using custom css class here (remove absolute and margin-bottom)
-  .widget-slider {
-      padding-bottom: 38px;
-  }
-  */
-
   .widget-title {
     position: relative;
     margin-top: 0;
@@ -65,6 +58,7 @@
     font-weight: 700;
     color: @gray-darker;
     text-transform: uppercase;
+
     &:before {
       position: absolute;
       top: -5px;
@@ -75,6 +69,7 @@
       content: '';
     }
   }
+
   .widget-content {
     margin-top: 35px;
 
@@ -82,41 +77,41 @@
       margin-top: 25px;
       padding-bottom: 26px;
       border-bottom: 1px solid #eee;
+    }
 
-      .widget-post {
-        img {
-          float: left;
-          width: 75px;
+    ul {
+      padding-left: 0px;
+    }
+
+    .widget-post {
+      img {
+        float: left;
+        width: 75px;
+      }
+
+      .widget-post-content {
+        margin-left: 100px;
+
+        .widget-post-title {
+          margin-top: 0;
+          margin-bottom: 6px;
+          font-family: @font-family-Raleway;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 18px;
+          color: @gray;
+          text-align: left;
         }
 
-        .widget-post-content {
-          margin-left: 100px;
+        .widget-post-subtitle {
+          margin-bottom: 12px;
+          font: 500 13px Ubuntu;
+          text-align: left;
+          text-transform: uppercase;
+        }
 
-          .widget-post-title {
-            margin-top: 0;
-            margin-bottom: 6px;
-            font-family: @font-family-Raleway;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 18px;
-            color: @gray;
-            text-align: left;
-          }
-
-          .widget-post-subtitle {
-            margin-bottom: 12px;
-            font: 500 13px Ubuntu;
-            text-align: left;
-            text-transform: uppercase;
-          }
-
-          .widget-post-description {
-            font-weight: 300;
-          }
-
-          /*.widget-post1__reviews {
-              margin-top: 13px;
-          }*/
+        .widget-post-description {
+          font-weight: 300;
         }
       }
     }
@@ -213,68 +208,78 @@
           background-color: #222;
       }
   }
-  .list-tags__link {
-      display: block;
-      padding: 10px 18px;
-      font-size: 11px;
-      font-weight: 500;
-      color: @color_1;
-      background-color: #f5f5f5;
-      box-shadow: 0 3px 0 0 #ccc;
-      transition: all 0.3s;
-      text-transform: uppercase;
-      &:hover {
-          color: @color_3;
-          box-shadow: 0 3px 0 0 #555;
-          text-decoration: none;
-      }
-  }
-  .list-tags {
-      > li {
-          margin-bottom: 15px;
-          padding-left: 0;
-      }
-  }*/
+
+  */
+
   .widget-social {
-    list-style-type: none;
+    .widget-content {
+      ul {
+        list-style-type: none;
 
-    .widget-social-item {
-      position: relative;
-      margin-bottom: 22px;
-      padding-bottom: 23px;
-      padding-left: 24px;
-      font-weight: 300;
-      line-height: 1.53;
-      color: @color_4;
-      border-bottom: 1px solid #eee;
-      &:before {
-        position: absolute;
-        top: 2px;
-        left: 0;
-        font: normal normal normal 14px/1 FontAwesome;
-        content: '\f099';
-      }
+        li.widget-social-item {
+          position: relative;
+          margin-bottom: 22px;
+          padding-bottom: 23px;
+          padding-left: 24px;
+          font-weight: 300;
+          line-height: 1.53;
+          color: @color_4;
+          border-bottom: 1px solid #eee;
 
-      a {
-        margin-top: 7px;
-        font-weight: 500;
-        color: @gray;
-        &:hover {
-          color: @gray;
+          &:before {
+            position: absolute;
+            top: 2px;
+            left: 0;
+          }
+
+          a {
+            margin-top: 7px;
+            font-weight: 500;
+            color: @gray;
+            &:hover {
+              color: @gray;
+            }
+          }
+
+          &.widget-social-twitter {
+            &:before {
+              position: absolute;
+              top: 2px;
+              left: 0;
+              font: normal normal normal 14px/1 FontAwesome;
+              content: '\f099';
+            }
+          }
         }
       }
     }
   }
-  .widget_searce {
-    margin-bottom: 27px;
-    padding-top: 33px;
-  }
 
-  /*
-  .btn {
-    margin-top: 42px;
-    margin-left: 40px;
-    padding-right: 12px;
-    overflow: hidden;
-  }*/
+  .widget-tag {
+    .widget-content {
+      li.widget-tag-item {
+        margin-bottom: 15px;
+        padding-left: 0;
+
+        a {
+          display: block;
+          padding: 10px 18px;
+          font-size: 11px;
+          font-weight: 500;
+          color: @gray-darker;
+          background-color: @body-bg;
+          border-bottom: 3px solid #ccc;
+          transition: all 0.3s;
+          text-transform: uppercase;
+
+          &:hover {
+            color: @white;
+            background-color: @bg-primary;
+            border-color: @gray;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
