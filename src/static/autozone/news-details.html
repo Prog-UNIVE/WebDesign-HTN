@@ -139,8 +139,8 @@
                                 cillum
                                 dolore eu fugiat nulla pariatur.</p>
 
-                            <h3 class="ui-title-inner">Lorem ipsum dolor sit amet consectetur</h3>
-                            <div class="decor-1"></div>
+                            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                            <div class="decor decor-1"></div>
                             <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
                                 architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
@@ -214,58 +214,58 @@
                 </article><!-- end post -->
 
                 <div class="post-nav">
-                    <div class="post-nav__item">
-                        <div class="post-nav__img"><img class="img-responsive" src="assets/media/75x75/1.jpg"
-                                                        height="75" width="75" alt="foto"></div>
-                        <div class="post-nav__inner">
-                            <div class="post-nav__title">Tempor incididunt labore dolore magna aliqua</div>
-                            <a class="post-nav__link" href="javascript:void(0);"><i
-                                    class="decor-3 fa fa-caret-right"></i>previous POST</a>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 post-nav-item text-center">
+                            <h3 class="post-nav-title">Tempor incididunt labore dolore magna aliqua</h3>
+                            <a class="post-nav-link" href="javascript:void(0);">
+                                <i class="decor decor-3 fa fa-caret-right"></i>previous POST
+                            </a>
                         </div>
-                    </div>
-                    <div class="post-nav__item">
-                        <div class="post-nav__img"><img class="img-responsive" src="assets/media/75x75/2.jpg"
-                                                        height="75" width="75" alt="foto"></div>
-                        <div class="post-nav__inner">
-                            <div class="post-nav__title">Dolor sit media ei nullam sed ipsum dui</div>
-                            <a class="post-nav__link" href="javascript:void(0);">NEXT POST<i
-                                    class="decor-3 fa fa-caret-right"></i></a>
+                        <div class="col-xs-12 col-sm-6 post-nav-item text-center">
+                            <h3 class="post-nav-title">Dolor sit media ei nullam sed ipsum dui</h3>
+                            <a class="post-nav-link" href="javascript:void(0);">
+                                NEXT POST<i class="decor decor-3 fa fa-caret-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-
-                <section class="section-comment">
-                    <h3 class="ui-title-inner">comments :: 2</h3>
-                    <div class="decor-1"></div>
-
-                    <ul class="comments-list clearfix">
+                <section class="comment-wrapper">
+                    <h3 class="comment-title">comments :: 2</h3>
+                    <div class="decor decor-1"></div>
+                    <ul class="comments-list">
                         <li>
-                            <article class="comment">
-                                <div class="avatar-placeholder"><img src="assets/media/avatar_comments/1.jpg"
-                                                                     height="65" width="65" alt="avatar"></div>
-                                <div class="comment-inner">
-                                    <header class="comment-header"><cite class="comment-author">ANDREW <span
-                                            class="comment-author__inner">says</span></cite>
+                            <article class="comment row">
+                                <div class="col-xs-12 col-sm-2">
+                                    <img class="img-responsive img-round comment-avatar"
+                                         src="assets/media/avatar_comments/1.jpg"
+                                         alt="avatar">
+                                </div>
+                                <div class="col-xs-12 col-sm-10 comment-inner">
+                                    <header class="comment-header">
+                                        <cite class="comment-author">ANDREW <span>says</span></cite>
                                         <time class="comment-datetime" datetime="2012-10-27 15:20">23 SEP 2015 :: 6:10
                                             PM
                                         </time>
                                     </header>
                                     <div class="comment-body">
                                         <p>Wliquam sit amet urna sed vel nullam semper aiber vestiblum fringilla orem
-                                            ipsum dolor sit amet consectetur adipisc ing elit sed don eiusmod.</p>
-                                        <div class="comment-reply"><a class="btn btn-default btn-effect"
-                                                                      href="javascript:void(0);"><span
-                                                class="btn-inner">Reply</span></a></div>
+                                            ipsum dolor sit amet consectetur adipisc ing elit sed don eiusmod.
+                                        </p>
+                                        <div class="comment-reply">
+                                            <a class="btn btn-default" href="#">Reply</a>
+                                        </div>
                                     </div>
                                 </div>
                             </article>
-                            <ul class="children clearfix">
+                            <ul class="comments-list children">
                                 <li>
-                                    <article class="comment">
-                                        <div class="avatar-placeholder"><img src="assets/media/avatar_comments/2.jpg"
-                                                                             height="65" width="65" alt="avatar"></div>
-                                        <div class="comment-inner">
+                                    <article class="comment row">
+                                        <div class="col-xs-12 col-sm-2">
+                                            <img class="img-responsive img-round comment-avatar"
+                                                 src="assets/media/avatar_comments/2.jpg" alt="avatar">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-10 comment-inner">
                                             <header class="comment-header"><cite class="comment-author">MARK <span
                                                     class="comment-author__inner">says</span></cite>
                                                 <time class="comment-datetime" datetime="2012-10-27 15:20">13 SEP 2015
@@ -275,21 +275,74 @@
                                             <div class="comment-body">
                                                 <p>Wliquam sit amet urna sed vel nullam semper aiber vestiblum fringilla
                                                     orem ipsum doloa.</p>
-                                                <div class="comment-reply"><a class="btn btn-default btn-effect"
-                                                                              href="javascript:void(0);"><span
-                                                        class="btn-inner">Reply</span></a></div>
+                                                <div class="comment-reply">
+                                                    <a class="btn btn-default"
+                                                       href="javascript:void(0);">Reply</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </article>
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <article class="comment row">
+                                <div class="col-xs-12 col-sm-2">
+                                    <img class="img-responsive img-round comment-avatar"
+                                         src="assets/media/avatar_comments/1.jpg"
+                                         alt="avatar">
+                                </div>
+                                <div class="comment-inner col-xs-12 col-sm-10">
+                                    <header class="comment-header">
+                                        <cite class="comment-author">ANDREW <span
+                                                class="comment-author__inner">says</span></cite>
+                                        <time class="comment-datetime" datetime="2012-10-27 15:20">23 SEP 2015 :: 6:10
+                                            PM
+                                        </time>
+                                    </header>
+                                    <div class="comment-body">
+                                        <p>Wliquam sit amet urna sed vel nullam semper aiber vestiblum fringilla orem
+                                            ipsum dolor sit amet consectetur adipisc ing elit sed don eiusmod.
+                                        </p>
+                                        <div class="comment-reply">
+                                            <a class="btn btn-default" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="comment row">
+                                <div class="col-xs-12 col-sm-2">
+                                    <img class="img-responsive img-round comment-avatar"
+                                         src="assets/media/avatar_comments/1.jpg"
+                                         alt="avatar">
+                                </div>
+                                <div class="comment-inner col-xs-12 col-sm-10">
+                                    <header class="comment-header">
+                                        <cite class="comment-author">ANDREW <span
+                                                class="comment-author__inner">says</span></cite>
+                                        <time class="comment-datetime" datetime="2012-10-27 15:20">23 SEP 2015 :: 6:10
+                                            PM
+                                        </time>
+                                    </header>
+                                    <div class="comment-body">
+                                        <p>Wliquam sit amet urna sed vel nullam semper aiber vestiblum fringilla orem
+                                            ipsum dolor sit amet consectetur adipisc ing elit sed don eiusmod.
+                                        </p>
+                                        <div class="comment-reply">
+                                            <a class="btn btn-default" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
                     </ul><!-- end comments-list -->
                 </section><!-- end section-comment -->
 
-                <form class="comment-reply-form" id="comment-reply-form" action="news-details.html#" method="get">
-                    <h3 class="ui-title-inner">leave a comment</h3>
-                    <div class="decor-1"></div>
+                <form class="comment-form" id="comment-reply-form" action="news-details.html#" method="get">
+                    <h3 class="comment-form-title">leave a comment</h3>
+                    <div class="decor decor-1"></div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <input class="form-control" type="text" id="comment-author" name="author"
@@ -314,10 +367,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12">
-                            <div class="wrap__btn-skew-r">
-                                <button class="btn-skew-r btn-skew-r_mod-a btn-effect "><span class="btn-skew-r__inner">send message</span>
-                                </button>
-                            </div>
+                            <button class="btn btn-primary">Send message</button>
                         </div>
                     </div>
                 </form><!-- end comment-reply-form -->
