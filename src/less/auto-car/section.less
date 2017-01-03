@@ -269,18 +269,21 @@
   left: 0;
   width: 100%;
   z-index: 1030;
+  color: @white;
 
-  &.navbar-autozone {
+  &.affix {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .navbar-autozone {
+    position: relative;
     margin-top: 3px;
+    margin-bottom: 0px;
     background-color: transparent;
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 0;
-
-    &.affix{
-      position: fixed;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
 
     .navbar-brand {
       color: @white;
@@ -378,30 +381,29 @@
       border: none;
       border-radius: 0px;
       background-color: transparent;
+      overflow: hidden;
 
       .icon-bar {
         background-color: @brand-primary;
+
+        transition: opacity, transform;
+        transition-duration: 200ms;
+        transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
       }
 
-      &.collapsed {
+      &:not(.collapsed) {
         .icon-bar {
-          opacity: 1;
-          transform: rotate(0);
+          &.top-bar {
+            transform: translateY(6px) rotate(45deg);
+          }
+          &.middle-bar {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          &.bottom-bar {
+            transform: translateY(-6px) rotate(-45deg);
+          }
         }
-      }
-
-      .top-bar {
-        transform: rotate(45deg);
-        transform-origin: 10% 10%;
-      }
-
-      .middle-bar {
-        opacity: 0;
-      }
-
-      .bottom-bar {
-        transform: rotate(-45deg);
-        transform-origin: 10% 90%;
       }
     }
 
@@ -483,7 +485,7 @@
 
     @media (max-width: @grid-float-breakpoint-max) {
       margin-top: 0px;
-      background-color: rgba(0, 0, 0, 0.8);
+      border: none;
     }
   }
 }
