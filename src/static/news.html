@@ -19,264 +19,230 @@
 </head>
 <body id="body-top" class="layout-theme animated-css">
 <!-- Top menu -->
-<nav class="navbar yamm navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
-            </a>
-            <button type="button" class="navbar-toggle text-center"
-                    data-toggle="collapse" data-target="#main-menu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<header class="header">
+    <nav class="navbar navbar-fixed-top navbar-autozone yamm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="https://placehold.it/100x45?text=Your+Logo">
+                </a>
+                <button type="button" class="navbar-toggle collapsed text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li><a class="text-center" href="./">Home</a></li>
+                    <li class="active"><a class="text-center" href="news.html">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Carburante</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li><a class="text-center" href="services.html">Servizi</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="login.html">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="signup-step-1.html">Registrazione</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            <span class="sr-only">Cerca</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <form action="search.html" method="get" class="form-search">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="search">Search</label>
+                                            <input id="search" class="form-control"
+                                                   placeholder="Cerca..." type="text">
+                                        </div>
+                                        <button class="btn btn-default form-search__submit" type="submit">
+                                            <i class="icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="main-menu">
-            <ul class="nav navbar-nav">
-                <li class="active"><a class="text-center" href="#">Home</a></li>
-                <li><a class="text-center" href="#">News</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Come funziona<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Assicurazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Carburante</a></li>
-                    </ul>
-                </li>
-                <li><a class="text-center" href="#">FAQ</a></li>
-                <li><a class="text-center" href="#">Prenotazione</a></li>
-                <li><a class="text-center" href="#">Servizi</a></li>
-                <li><a class="text-center" href="#">Chi siamo</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Area riservata<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Login-in</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Registrazione</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
-                        <span class="fa fa-search" aria-hidden="true"></span>
-                        <span class="sr-only">Cerca</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <form method="get" class="form-search">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="search">Search</label>
-                                        <input id="search" class="form-control form-search__input"
-                                               placeholder="Cerca..." type="text">
-                                    </div>
-                                    <button class="btn btn-default form-search__submit" type="submit">
-                                        <i class="icon fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
-<div class="jumbotron text-center">
-    <h1>News</h1>
-</div>
+<section class="section">
+    <div class="block-title">
+        <div class="section-bg section-bg-cover section-bg-3 bg-secondary">
+            <div class="block-title-content">
+                <h1 class="block-title-title">latest news</h1>
+                <div class="decor decor-1 center-block"></div>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">home</a></li>
+                    <li class="active">news</li>
+                </ol>
+            </div><!-- end block-title-content -->
+        </div>
+    </div><!-- end block-title -->
+</section>
 
 <div class="container">
     <div class="row">
         <main class="col-xs-12 main-content">
-            <div class="row">
-                <article class="post post-grid col-xs-12 col-sm-6 col-md-4">
-                    <div class="post-body">
-                        <div class="post-media">
-                            <img class="img-responsive" src="https://placehold.it/800x600?text=post" alt="Foto"/>
-                            <div class="post-hover">
-                                <div class="post-hover-text"><span>Nuovo!</span></div>
-                            </div>
+            <div class="post-wrapper col-xs-12 col-sm-6 col-md-4">
+                <article class="post post-grid ">
+                    <header class="post-header">
+                        <img class="img-responsive" src="https://placehold.it/350x250?text=post" height="250"
+                             alt="Foto"/>
+                        <div class="post-hover">
+                            <div class="post-hover-text"><span>Hover Text</span></div>
                         </div>
+                    </header>
 
-                        <div class="post-content">
-                            <div class="post-header">
-                                <h3 class="entry-title">
-                                    <a href="#">
-                                        sed rt enim ad minim veniam quis
-                                    </a>
-                                </h3>
-                                <div class="post-meta">
+                    <section class="post-content">
+                        <div class="post-heading">
+                            <h3 class="post-title">
+                                <a href="news-dettaglio.html">
+                                    sed rt enim ad minim veniam quis
+                                </a>
+                            </h3>
+                            <div class="post-meta">
                                 <span class="post-meta-item">
-                                    By:: <a href="#">ALEX LEEMAN</a>
+                                    By:: <a href="news-dettaglio.html">ALEX LEEMAN</a>
                                 </span>
-                                    <span class="post-meta-item">
+                                <span class="post-meta-item">
                                     COMMENTS :: <a href="#">15</a>
                                 </span>
-                                </div>
                             </div>
-                            <div class="decor-1"></div>
-                            <div class="post-date">
-                                <div class="post-date-content">
-                                    <span class="post-date-day">01</span>
-                                    <br>
-                                    <span>oct</span>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
-                                    ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.</p>
-                            </div>
-                            <a class="post-link" href="javascript:void(0);">read more</a>
                         </div>
-                    </div>
+                        <div class="decor decor-1"></div>
+                        <div class="post-date">
+                            <div class="post-date-content">
+                                <span class="post-date-day">01</span>
+                                <br>
+                                <span>oct</span>
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <p>Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
+                                ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.</p>
+                        </div>
+                        <a class="post-link" href="javascript:void(0);">read more</a>
+                    </section>
                 </article>
-                <article class="post post-grid col-xs-12 col-sm-6 col-md-4">
-                    <div class="post-body">
-                        <div class="post-media">
-                            <img class="img-responsive" src="https://placehold.it/800x600?text=post" alt="Foto"/>
-                            <div class="post-hover"></div>
-                        </div>
+            </div>
+            <div class="post-wrapper col-xs-12 col-sm-6 col-md-4">
+                <article class="post post-grid ">
+                    <header class="post-header">
+                        <img class="img-responsive" src="https://placehold.it/350x250?text=post" height="250"
+                             alt="Foto"/>
+                        <div class="post-hover"></div>
+                    </header>
 
-                        <div class="post-content">
-                            <div class="post-header">
-                                <h3 class="entry-title">
-                                    <a href="#">
-                                        enim ad minim veniam quis nos used
-                                    </a>
-                                </h3>
-                                <div class="post-meta">
+                    <section class="post-content">
+                        <div class="post-heading">
+                            <h3 class="post-title">
+                                <a href="news-dettaglio.html">
+                                    enim ad minim veniam quis nos used
+                                </a>
+                            </h3>
+                            <div class="post-meta">
                                 <span class="post-meta-item">
                                     By:: <a class="entry-meta__link" href="#"> ALEX LEEMAN</a>
                                 </span>
-                                    <span class="post-meta-item">
+                                <span class="post-meta-item">
                                     COMMENTS :: <a class="entry-meta__link" href="#">15</a>
                                 </span>
-                                </div>
                             </div>
-                            <div class="decor-1"></div>
-                            <div class="post-date">
-                                <div class="post-date-content">
-                                    <span class="post-date-day">30</span>
-                                    <br>
-                                    sep
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>
-                                    Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
-                                    ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.
-                                </p>
-                            </div>
-                            <a class="post-link" href="#">read more</a>
                         </div>
-                    </div>
-                </article>
-                <article class="post post-grid col-xs-12 col-sm-6 col-md-4">
-                    <div class="post-body">
-                        <div class="post-media">
-                            <img class="img-responsive" src="https://placehold.it/800x600?text=post" alt="Foto"/>
-                            <div class="post-hover"></div>
+                        <div class="decor decor-1"></div>
+                        <div class="post-date">
+                            <div class="post-date-content">
+                                <span class="post-date-day">30</span>
+                                <br>
+                                <span>sep</span>
+                            </div>
                         </div>
-
-                        <div class="post-content">
-                            <div class="post-header">
-                                <h3 class="entry-title"><a href="javascript:void(0);">Sed nostrud
-                                    exercitation
-                                    ipsum</a></h3>
-                                <div class="post-meta">
-                                            <span class="post-meta-item">
-                                                By:: <a class="entry-meta__link"
-                                                        href="#"> ALEX LEEMAN</a>
-                                            </span>
-                                    <span class="post-meta-item">
-                                    COMMENTS :: <a class="entry-meta__link" href="#">15</a>
-                                </span>
-                                </div>
-                            </div>
-                            <div class="decor-1"></div>
-                            <div class="post-date">
-                                <div class="post-date-content"><span
-                                        class="post-date-day">28</span><br>sep
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
-                                    ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.</p>
-                            </div>
-                            <a class="post-link" href="javascript:void(0);">read more</a>
+                        <div class="post-body">
+                            <p>
+                                Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
+                                ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.
+                            </p>
                         </div>
-                    </div>
-                </article>
-
-                <article class="post post-grid col-xs-12 col-sm-6 col-md-4">
-                    <div class="post-body">
-                        <div class="post-media">
-                            <img class="img-responsive" src="https://placehold.it/800x600?text=post" alt="Foto"/>
-                            <div class="post-hover"></div>
-                        </div>
-
-                        <div class="post-content">
-                            <div class="post-header">
-                                <h3 class="entry-title"><a href="javascript:void(0);">Sed nostrud
-                                    exercitation
-                                    ipsum</a></h3>
-                                <div class="post-meta">
-                                            <span class="post-meta-item">
-                                                By:: <a class="entry-meta__link"
-                                                        href="#"> ALEX LEEMAN</a>
-                                            </span>
-                                    <span class="post-meta-item">
-                                    COMMENTS :: <a class="entry-meta__link" href="#">15</a>
-                                </span>
-                                </div>
-                            </div>
-                            <div class="decor-1"></div>
-                            <div class="post-date">
-                                <div class="post-date-content"><span
-                                        class="post-date-day">28</span><br>sep
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
-                                    ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.</p>
-                            </div>
-                            <a class="post-link" href="javascript:void(0);">read more</a>
-                        </div>
-                    </div>
+                        <a class="post-link" href="#">read more</a>
+                    </section>
                 </article>
             </div>
+            <div class="post-wrapper col-xs-12 col-sm-6 col-md-4">
+                <article class="post post-grid ">
+                    <header class="post-header">
+                        <img class="img-responsive" src="https://placehold.it/350x250?text=post" height="250"
+                             alt="Foto"/>
+                        <div class="post-hover"></div>
+                    </header>
 
-            <div class="row">
-                <nav class="col-xs-12 text-center" aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                    <section class="post-content">
+                        <div class="post-heading">
+                            <h3 class="post-title">
+                                <a href="news-dettaglio.html">Sed nostrud exercitation ipsum</a></h3>
+                            <div class="post-meta">
+                                            <span class="post-meta-item">
+                                                By:: <a class="entry-meta__link"
+                                                        href="#"> ALEX LEEMAN</a>
+                                            </span>
+                                <span class="post-meta-item">
+                                    COMMENTS :: <a class="entry-meta__link" href="#">15</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="decor decor-1"></div>
+                        <div class="post-date">
+                            <div class="post-date-content">
+                                <span class="post-date-day">28</span>
+                                <br>
+                                <span>sep</span>
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <p>Wliquam sit amet urna sed vel nullam semper aib vestiblum fringilla orem
+                                ipsum dolor sit amet con tetur adipiscing elit sed eiusmod.</p>
+                        </div>
+                        <a class="post-link" href="javascript:void(0);">read more</a>
+                    </section>
+                </article>
+            </div>
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="javascript:void(0);">PREV</a></li>
+                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                    <li><a href="javascript:void(0);">NEXT</a></li>
+                </ul>
             </div>
         </main><!-- end col -->
     </div><!-- end row -->
@@ -327,9 +293,9 @@
             <div class="row footer-row">
                 <div class="col-xs-12">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fa fa-phone"></i> Contattaci</a></li>
-                        <li><a href="#"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact-us.html"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="index-map.html"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
                     </ul>
                 </div>
             </div>

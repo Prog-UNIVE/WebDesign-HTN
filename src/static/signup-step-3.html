@@ -8,10 +8,11 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page autozone file:// -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -91,125 +92,51 @@
         </div>
     </div>
 </nav>
-
-
 <div class="jumbotron text-center">
-    <h1>Singola News</h1>
+    <h1>Registrazione</h1>
+</div>
+<div class="container">
+    <div class="col-sm-10 col-sm-push-1">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="signup-step-1.html">Prima</a></li>
+            <li><a href="signup-step-2.html">Seconda</a></li>
+            <li class="active">Terza fase registrazione</li>
+        </ol>
+        <form action="#" role="form" class="well">
+            <h3>Metodo di pagamento</h3>
+            <div class="form-group col-md-6">
+                <label for="doc">Carta di credito</label>
+                <select class="form-control" id="doc" required>
+                    <option hidden>Seleziona un tipo di carta</option>
+                    <option>American Express</option>
+                    <option>Visa</option>
+                    <option>Master Card</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="numberCarta">Numero carta</label>
+                <input id="numberCarta" type="text" class="form-control" placeholder="Numero carta" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nameCarta">Nome che appare sulla carta</label>
+                <input id="nameCarta" type="text" class="form-control" placeholder="Nome carta" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cvv">CVV</label>
+                <input id="cvv" type="text" class="form-control" placeholder="CVV" required>
+            </div>
+            <ul class="pager">   <!-- TODO - premendo termina visualizzare pop-up che dice  "iscrizione avvenuta" -->
+                <li class="previous"><a href="signup-step-2.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrecendente</a></li>
+                <li class="next"><a href="#" onclick="form.submit();">Termina&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+            </ul>
+        </form>
+    </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <main class="main-content">
-                <h2>Titolo news</h2>
-                <p class="text-muted"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp31 Gennaio
-                    2017
-                </p>
-                <img src="https://placehold.it/900x300?text=c1" alt="Foto" class="img-responsive center-block">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
-                    habitasse
-                    platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis
-                    non
-                    velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim.
-                    Donec
-                    tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel,
-                    rhoncus
-                    id
-                    sapien.
-                </p>
-                <p>
-                    Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis
-                    augue.
-                    Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus
-                    purus
-                    elit,
-                    mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id
-                    lectus.
-                    Fusce quis vulputate augue, ac pellentesque augue.
-                </p>
-                <h3>Titolo paragrafo 1</h3>
-                <p>
-                    Sed aliquam volutpat lacus id ultricies. Cras ut metus id velit suscipit fermentum quis convallis
-                    augue.
-                    Vivamus accumsan volutpat lorem. Quisque tristique quam ut eros porta lobortis. Vivamus maximus
-                    purus
-                    elit,
-                    mattis placerat velit suscipit quis. Donec libero neque, scelerisque eget sagittis non, efficitur id
-                    lectus.
-                    Fusce quis vulputate augue, ac pellentesque augue.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
-                    habitasse
-                    platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas iaculis
-                    non
-                    velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus enim.
-                    Donec
-                    tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis vel,
-                    rhoncus
-                    id
-                    sapien.
-                </p>
-                <blockquote>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ultricies erat. In hac
-                        habitasse
-                        platea dictumst. Suspendisse pretium porttitor lorem, eu porttitor orci cursus ac. Maecenas
-                        iaculis
-                        non
-                        velit at pretium. Sed ut lobortis quam. Etiam ut dolor euismod, tempus odio elementum, maximus
-                        enim.
-                        Donec tincidunt magna sit amet scelerisque tincidunt. Duis nisi arcu, maximus sit amet sagittis
-                        vel,
-                        rhoncus id sapien.
-                    </p>
-                    <footer>Autore citazione 1</footer>
-                </blockquote>
-                <hr>
-                <ul class="pager">
-                    <li class="previous"><a href="#"><span class="glyphicon glyphicon-arrow-left"
-                                                           aria-hidden="true"></span>&nbspNews
-                        precedente</a></li>
-                    <li class="next"><a href="#">News successiva&nbsp<span class="glyphicon glyphicon-arrow-right"
-                                                                           aria-hidden="true"></span></a></li>
-                </ul>
-                <hr>
-            </main>
-        </div>
-        <div class="col-md-4">
-            <aside class="sidebar">  <!-- TODO - spaziare gli elementi "li" tra di loro -->
-                <div class="widget">
-                    <h3 class="widget-title">TAG</h3>
-                    <div class="decor-1">
-                        <div class="widget-content">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">
-                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 3
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Tag 4
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-            </aside>
-        </div>
-    </div>
+<div class="jumbotron text-center">
+    <h2>Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-primary btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
 </div>
 
 <footer class="footer wow bounceInUp" data-wow-duration="2s">
@@ -283,4 +210,7 @@
 <script src="js/app.js"></script>
 </body>
 </html>
+
+
+
 

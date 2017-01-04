@@ -99,36 +99,79 @@
     <div class="col-sm-10 col-sm-push-1">
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li><a href="signup.html">Prima</a></li>
-            <li><a href="signup2.html">Seconda</a></li>
-            <li class="active">Terza fase registrazione</li>
+            <li class="active">Prima fase registrazione</li>
         </ol>
         <form action="#" role="form" class="well">
-            <h3>Metodo di pagamento</h3>
+            <h3>Account</h3>
+            <div class="form-group col-xs-12">
+                <label for="username">Username</label>
+                <input id="username" type="text" class="form-control" placeholder="Username" required>
+            </div>
             <div class="form-group col-md-6">
-                <label for="doc">Carta di credito</label>
+                <label for="passwd">Password</label>
+                <input id="passwd" type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="confermaPasswd">Conferma Password</label>
+                <input id="confermaPasswd" type="password" class="form-control" placeholder="Conferma password" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input id="email" type="text" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="repeatEmail">Ripeti email</label>
+                <input id="repeatEmail" type="text" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="checkbox">
+                    <label><input type="checkbox" required>Accetto i <a href="#">Termini e Condizioni d'uso</a></label>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="checkbox">
+                    <label><input type="checkbox">Iscrizione alla newsletter</label>
+                </div>
+            </div>
+            <h3>Dati anagrafici</h3>
+            <div class="form-group col-md-6">
+                <label for="name">Nome</label>
+                <input id="name" type="text" class="form-control" placeholder="Nome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="surname">Cognome</label>
+                <input id="surname" type="text" class="form-control" placeholder="Cognome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="birthday">Data di nascita</label>
+                <input id="birthday" type="date" name="bday" class="form-control" placeholder="Data nascita" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="codiceFiscale">Codice Fiscale</label>
+                <input id="codiceFiscale" type="text" class="form-control" placeholder="Codice fiscale" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="doc">Documento di identità</label>
                 <select class="form-control" id="doc" required>
-                    <option hidden>Seleziona un tipo di carta</option>
-                    <option>American Express</option>
-                    <option>Visa</option>
-                    <option>Master Card</option>
+                    <option hidden>Seleziona un tipo di documento</option>
+                    <option>Carta d'identità</option>
+                    <option>Passaporto</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
-                <label for="numberCarta">Numero carta</label>
-                <input id="numberCarta" type="text" class="form-control" placeholder="Numero carta" required>
+                <label for="numDoc">Numedo del documento</label>
+                <input id="numDoc" type="text" class="form-control" placeholder="Numero del documento" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="nameCarta">Nome che appare sulla carta</label>
-                <input id="nameCarta" type="text" class="form-control" placeholder="Nome carta" required>
+                <label for="dateReleaseDoc">Data rilascio del documento</label>
+                <input id="dateReleaseDoc" type="date" name="releaseDoc" class="form-control" placeholder="Data rilascio" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="cvv">CVV</label>
-                <input id="cvv" type="text" class="form-control" placeholder="CVV" required>
+                <label for="scdDoc">Data scadenza del documento</label>
+                <input id="scdDoc" type="date" name="scdDoc" class="form-control" placeholder="Data scadenza" required>
             </div>
-            <ul class="pager">   <!-- TODO - premendo termina visualizzare pop-up che dice  "iscrizione avvenuta" -->
-                <li class="previous"><a href="signup2.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrecendente</a></li>
-                <li class="next"><a href="#" onclick="form.submit();">Termina&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+            <ul class="pager">
+                <li class="next"><a href="signup-step-2.html" onclick="form.submit();">Successiva&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
             </ul>
         </form>
     </div>
@@ -210,7 +253,5 @@
 <script src="js/app.js"></script>
 </body>
 </html>
-
-
 
 

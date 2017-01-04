@@ -12,77 +12,82 @@
 </head>
 
 
-<body id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
-
-<nav class="navbar yamm navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
-            </a>
-            <button type="button" class="navbar-toggle text-center" data-toggle="collapse" data-target="#main-menu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<body id="this-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<header class="header">
+    <nav class="navbar navbar-fixed-top navbar-autozone yamm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="https://placehold.it/100x45?text=Your+Logo">
+                </a>
+                <button type="button" class="navbar-toggle collapsed text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="text-center" href="#">Home</a></li>
+                    <li><a class="text-center" href="#">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Carburante</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="text-center" href="#">FAQ</a></li>
+                    <li><a class="text-center" href="#">Prenotazione</a></li>
+                    <li><a class="text-center" href="#">Servizi</a></li>
+                    <li><a class="text-center" href="#">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Registrazione</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            <span class="sr-only">Cerca</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <form method="get" class="form-search">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="search">Search</label>
+                                            <input id="search" class="form-control"
+                                                   placeholder="Cerca..." type="text">
+                                        </div>
+                                        <button class="btn btn-default form-search__submit" type="submit">
+                                            <i class="icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="main-menu">
-            <ul class="nav navbar-nav">
-                <li class="active"><a class="text-center" href="#">Home</a></li>
-                <li><a class="text-center" href="#">News</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Assicurazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Carburante</a></li>
-                    </ul>
-                </li>
-                <li><a class="text-center" href="#">FAQ</a></li>
-                <li><a class="text-center" href="#">Prenotazione</a></li>
-                <li><a class="text-center" href="#">Servizi</a></li>
-                <li><a class="text-center" href="#">Chi siamo</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">Area riservata<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Login-in</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Registrazione</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
-                        <span class="fa fa-search" aria-hidden="true"></span>
-                        <span class="sr-only">Cerca</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <form method="get" class="form-search">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="search">Search</label>
-                                        <input id="search" class="form-control"
-                                               placeholder="Cerca..." type="text">
-                                    </div>
-                                    <button class="btn btn-default form-search__submit" type="submit">
-                                        <i class="icon fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
 <div class="container">
     <div class="row">

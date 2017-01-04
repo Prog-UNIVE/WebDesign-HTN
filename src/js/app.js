@@ -210,7 +210,7 @@ $(document).ready(function () {
 //  Chars Start
 /////////////////////////////////////
 
-    /*if ($('body').length) {
+    if ($('body').length) {
         $(window).on('scroll', function () {
             var winH = $(window).scrollTop();
 
@@ -241,7 +241,7 @@ $(document).ready(function () {
             }
         });
 
-    }*/
+    }
 
 
 /////////////////////////////////////////////////////////////////

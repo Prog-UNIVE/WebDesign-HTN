@@ -36,8 +36,8 @@
             </div>
             <div class="collapse navbar-collapse" id="main-menu">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="text-center" href="#">Home</a></li>
-                    <li><a class="text-center" href="#">News</a></li>
+                    <li class="active"><a class="text-center" href="./">Home</a></li>
+                    <li><a class="text-center" href="news.html">News</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
                            aria-haspopup="true"
@@ -50,10 +50,9 @@
                             <li><a class="text-center" href="#">Carburante</a></li>
                         </ul>
                     </li>
-                    <li><a class="text-center" href="#">FAQ</a></li>
-                    <li><a class="text-center" href="#">Prenotazione</a></li>
-                    <li><a class="text-center" href="#">Servizi</a></li>
-                    <li><a class="text-center" href="#">Chi siamo</a></li>
+                    <li><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li><a class="text-center" href="services.html">Servizi</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -61,9 +60,9 @@
                            aria-haspopup="true"
                            aria-expanded="false">Area riservata<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="text-center" href="#">Login-in</a></li>
+                            <li><a class="text-center" href="login.html">Login-in</a></li>
                             <li class="divider"></li>
-                            <li><a class="text-center" href="#">Registrazione</a></li>
+                            <li><a class="text-center" href="signup-step-1.html">Registrazione</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -74,7 +73,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
-                                    <form method="get" class="form-search">
+                                    <form action="search.html" method="get" class="form-search">
                                         <div class="form-group">
                                             <label class="sr-only" for="search">Search</label>
                                             <input id="search" class="form-control"
@@ -117,7 +116,7 @@
                 <li class="col-xs-6">
                     <div class="pull-right text-center">
                         <a href="#">
-                            <img src="https://placehold.it/170x250?text=a1" alt="Foto" class="img-responsive">
+                            <img src="img/home/f1.jpg" alt="Foto" class="img-responsive">
                             <p>all brands</p>
                         </a>
                     </div>
@@ -125,7 +124,7 @@
                 <li class="col-xs-6">
                     <div class="pull-left text-center">
                         <a href="#">
-                            <img src="https://placehold.it/170x250?text=a2" alt="Foto" class="img-responsive">
+                            <img src="img/home/f2.jpg" alt="Foto" class="img-responsive">
                             <p>free support</p>
                         </a>
                     </div>
@@ -135,7 +134,7 @@
                 <li class="col-xs-6">
                     <div class="pull-right text-center">
                         <a class="" href="#">
-                            <img src="https://placehold.it/170x250?text=b1" alt="Foto" class="img-responsive">
+                            <img src="img/home/f3.jpg" alt="Foto" class="img-responsive">
                             <p>dealership</p>
                         </a>
                     </div>
@@ -143,7 +142,7 @@
                 <li class="col-xs-6">
                     <div class="pull-left text-center">
                         <a class="" href="#">
-                            <img src="https://placehold.it/170x250?text=b2" alt="Foto" class="img-responsive">
+                            <img src="img/home/f4.jpg" alt="Foto" class="img-responsive">
                             <p>affordable</p>
                         </a>
                     </div>
@@ -174,9 +173,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <a class="section-link-brand text-center wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s"
-                   href="javascript:void(0);">
+                   href="our-cars.html">
                     <i class="icon fa fa-caret-right"></i>
-                    SEE LISTED VEHICLES
+                    I NOSTRI VEICOLI
                     <i class="icon fa fa-caret-left"></i>
                     <div class="decor decor-1 decor-1_mod-b"></div>
                 </a>
@@ -185,15 +184,50 @@
     </div>
 </section>
 
-<section class="section section-content section-bg section-bg-cover section-bg-1">
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
-            </p>
-            <div class="text-center">
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Scopri la nostra flotta</a></p>
+<section class="section">
+    <div class="section-top">
+        <div class="section-bg section-bg-cover section-bg-3 bg-secondary">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2 class="section-title">I nostri numeri</h2>
+                        <div class="section-subtitle">we have some superb facts here</div>
+                        <ul class="list-unstyled list-inline list-progress">
+                            <li class="col-xs-4">
+                                <i class="fa fa-building" aria-hidden="true"></i>
+                                <div class="list-progress__inner">
+                                    <span class="chart" data-percent="8"></span>
+                                    <span class="list-progress__name">Città</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-4">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <div class="list-progress__inner">
+                                    <span class="chart" data-percent="2500"><span class="percent"></span>+</span>
+                                    <span class="list-progress__name">Veicoli</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-4">
+                                <i class="fa fa-plug" aria-hidden="true"></i>
+                                <div class="list-progress__inner">
+                                    <span class="chart" data-percent="60"><span class="percent"></span>+</span>
+                                    <span class="list-progress__name">Punti di ricarica</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-4">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <div class="list-progress__inner">
+                                    <span class="chart" data-percent="10000"><span class="percent"></span>+</span>
+                                    <span class="list-progress__name">Clienti</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-bottom">
+                    <div class="section-bottom-parallelogram"></div>
+                    <div class="section-bottom-triangle"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -203,9 +237,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h2 class="section-title">our services</h2>
-                <span class="section-subtitle">we are offering vehicle services 24/7</span>
-                <!-- TODO - Slider -->
+                <h2 class="section-title">Servizi</h2>
+                <span class="section-subtitle">I servizi pensati per il guidatore</span>
             </div>
         </div>
         <div class="row">
@@ -219,94 +252,43 @@
                 </p>
             </div>
             <div class="col-sm-6">
-                <h2 class="section-title-inner">Main features</h2>
+                <h2 class="section-title-inner">In città:</h2>
                 <ul class="list-unstyled">
-                    <li>Opzione 1</li>
-                    <li>Opzione 2</li>
-                    <li>Opzione 3</li>
+                    <li><i class="fa fa-caret-right"></i> Parcheggi</li>
+                    <li><i class="fa fa-caret-right"></i> Accessi ZTL</li>
+                    <li><i class="fa fa-caret-right"></i> Ristorazione</li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="section section-content section-bg section-bg-cover section-bg-1">
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
-            </p>
-            <div class="text-center">
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Scopri la nostra flotta</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-content">
-    <div class="container">
         <div class="row">
-            <div class="col-xs-12 text-center">
-                <h2 class="">our services</h2>
-                <span>we are offering vehicle services 24/7</span>
-                <!-- TODO - Slider -->
+            <div class="col-xs-12">
+                <a class="section-link-brand text-center wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s"
+                   href="services.html">
+                    <i class="icon fa fa-caret-right"></i>
+                    ALTRI SERVIZI
+                    <i class="icon fa fa-caret-left"></i>
+                    <div class="decor decor-1 decor-1_mod-b"></div>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="section-top">
-        <div class="section-bg section-bg-cover section-bg-3 bg-secondary">
-            <div class="container section-content">
-                <div class="row">
-                    <div class="col-xs-12 text-center">
-                        <h2 class="section-title">real facts</h2>
-                        <div class="">we have some superb facts here</div>
-                        <ul class="list-unstyled list-inline col-xs-12">
-                            <li class="col-xs-4">
-                                <div class="">
-                                    <span class="glyphicon glyphicon-alert"></span><span>&nbsp Inserire contatore 1</span>
-                                </div>
-                            </li>
-                            <li class="col-xs-4">
-                                <div class="">
-                                    <span class="glyphicon glyphicon-alert"></span><span>&nbsp Inserire contatore 2</span>
-                                </div>
-                            </li>
-                            <li class="col-xs-4">
-                                <div class="">
-                                    <span class="glyphicon glyphicon-alert"></span><span>&nbsp Inserire contatore 3</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="section-bottom border-section-cropped">
-                    <div class="section-bottom-parallelogram"></div>
-                    <div class="section-bottom-triangle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="section section-content">
+<section class="section section-content section-bg section-bg-left section-bg-2">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="">about us</h2>
-                <div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum.
-                </div>
+                <h2 class="section-title">Chi siamo</h2>
+                <span class="section-subtitle section-subtitle-small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum.
+                </span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-5">
                 <h3 class="">trusted name in auto-world</h3>
-                <div class="">
+                <div>
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum. Maecenas
                         vehicula pharetra velit eget tristique. Interdum et malesuada fames ac ante ipsum primis in
@@ -339,38 +321,16 @@
                 </ul>
             </div>
             <div class="col-md-7">
-                <img src="https://placehold.it/600x350" alt="Foto" class="img-responsive">
-                <!-- TODO - Sistemare immagine centrata verticalmente -->
+                <img src="img/bg/10.png" alt="Foto" class="img-responsive">
             </div>
         </div>
     </div>
 </section>
 
-<section class="jumbotron"> <!-- TODO - aggiungere immagine mappa -->
-    <div class="container text-center">
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Prenota ora</a></p>
-    </div>
-</section>
-
-<section class="">
+<section class="section section-content section-bg section-bg-cover section-bg-3">
+    <!-- TODO - aggiungere immagine sfondo -->
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="text-center">what customers say</h2>
-                <div class="text-center">Lorem ipsum dolor sit ametelit sed do</div>
-
-                <!-- TODO - aggiungere slider -->
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="jumbotron"> <!-- TODO - aggiungere immagine sfondo -->
-    <div class="container">
-        <h2 class="">Contact us</h2>
+        <h2 class="section-title">Contact us</h2>
         <p class="text-justify">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
             Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
             Donec in rutrum odio, sit amet cursus sem. Vivamus ullamcorper urna id pretium scelerisque.</p>
@@ -378,10 +338,10 @@
     </div>
 </section>
 
-<section>
+<section class="section section-content">
     <div class="row text-center">
-        <h2>TAG News</h2>
-        <div class="well col-xs-10 col-sm-4 col-xs-push-1 col-sm-push-2">
+        <div class="col-xs-10 col-sm-4 col-xs-push-1 col-sm-push-2">
+            <h2 class="section-title">TAG News</h2>
             <!-- TODO - autozone CSS sistemare size testo -->
             <a href="#" class="text-danger">Acquisto</a>
             <a href="#" class="text-success">BMW</a>
@@ -407,10 +367,11 @@
             <a href="#" class="text-danger">Macchina</a>
         </div>
         <div class="col-xs-10 col-sm-4 col-xs-push-1 col-sm-push-2">
+            <h2 class="section-title">Ricerca per TAG</h2>
             <form role="form">
-                <h3>Ricerca per TAG</h3>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="tag" placeholder="Cerca">
+                    <label for="tag" class="sr-only"></label>
+                    <input type="text" name="tag" id="tag" class="form-control" placeholder="Cerca">
                     <span class="input-group-btn">
                             <button class="btn btn-default" type="submit">Cerca</button>
                         </span>
@@ -466,9 +427,9 @@
             <div class="row footer-row">
                 <div class="col-xs-12">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fa fa-phone"></i> Contattaci</a></li>
-                        <li><a href="#"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact-us.html"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="index-map.html"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
                     </ul>
                 </div>
             </div>
