@@ -1,9 +1,11 @@
 {
-  "name": "CarSharing-HTN",
+  "name": "carsharing-htn",
   "description": "HTN Web template for the Car Sharing project",
   "main": "./dist/index.html",
   "authors": [
-    "[object Object]"
+    "Nicolò Veronese <nicveronese@gmail.com>",
+    "Fabio Dainese",
+    "Giovanni Libralesso"
   ],
   "license": "Apache-2.0",
   "homepage": "https://github.com/Prog-UNIVE/WebDesign-HTN",
@@ -16,9 +18,9 @@
     "tests"
   ],
   "dependencies": {
-    "Yamm3": "yamm3#^1.1.0",
     "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
+    "Yamm3": "yamm3#^1.1.0",
     "components-font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
     "nouislider": "^9.0.0",

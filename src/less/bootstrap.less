@@ -1,0 +1,71 @@
+/*
+ * Bower Assets & Other
+ */
+
+// Fonts
+@import "fonts.less";
+@import "../../bower_components/components-font-awesome/less/font-awesome.less";
+
+// Bootstrap
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "../../bower_components/Yamm3/yamm/yamm.less";
+
+// Other stuff
+@import (inline) "../../bower_components/animate.css/animate.css";
+@import (inline) "../../bower_components/nouislider/distribute/nouislider.css";
+@import (inline) "../../bower_components/select2/dist/css/select2.css";
+@import "../../bower_components/flexslider/flexslider.less";
+
+// Custom Variables
+@import "variables.less";
+
+
+//= Customized Bootstrap Components
+
+//= Pagination
+.pagination {
+  border-radius: 0px;
+
+  > li {
+    > a,
+    > span {
+      padding: @pagination-padding-vertical @pagination-padding-horizontal;
+      background-color: @pagination-bg;
+      border: none;
+      margin-left: 6px;
+      box-shadow: 0 3px 0 0 #ccc;
+    }
+
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        .border-left-radius(0px);
+      }
+    }
+
+    &:last-child {
+      > a,
+      > span {
+        .border-right-radius(0px);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 0 0 @brand-primary;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 0 0 @brand-primary;
+    }
+  }
+}

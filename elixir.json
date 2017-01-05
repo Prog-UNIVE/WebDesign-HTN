@@ -1,0 +1,6 @@
+{
+  "assetsPath": "src",
+  "publicPath": "dist",
+  "bowerPath": "bower_components",
+  "tmpPath": "tmp"
+}
