@@ -18,7 +18,7 @@
     <![endif]-->
 </head>
 
-<body id="body-top" class="layout-theme animated-css">
+<div id="body-top" class="layout-theme animated-css">
 <!-- Top menu -->
 <!-- Top menu -->
 <header class="header">
@@ -55,7 +55,7 @@
                     </li>
                     <li><a class="text-center" href="booking.html">Prenotazione</a></li>
                     <li><a class="text-center" href="services.html">Servizi</a></li>
-                    <li class="active"><a class="text-center" href="about-us.html">Chi siamo</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -112,36 +112,43 @@
 </section>
 
 <div class="container">
-    <form role="form">
-        <div class="input-group">
-            <input type="text" class="form-control" id="testo" placeholder="Cerca per...">
-            <span class="input-group-btn">
+    <div class="row">
+        <main class="col-xs-12 main-content">
+            <form role="form">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="testo" placeholder="Cerca per...">
+                    <span class="input-group-btn">
                     <button class="btn btn-default" type="submit">Cerca</button>
                  </span>
-        </div>
-        <div class="form-inline">
-            <h3>Filtra per:</h3>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="news">
-                    News
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="faq">
-                    Faq
-                </label>
-            </div>
-        </div>
-    </form>
+                </div>
+                <div class="form-inline">
+                    <h3>Filtra per:</h3>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="news">
+                            News
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="faq">
+                            Faq
+                        </label>
+                    </div>
+                </div>
+            </form>
 
-    <h3>Elenco risultati:</h3>
-    <ul class="list-unstyled">
-        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 1</a></li>
-        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 2</a></li>
-        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato 3</a></li>
-    </ul>
+            <h3>Elenco risultati:</h3>
+            <ul class="list-unstyled">
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
+                    1</a></li>
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
+                    2</a></li>
+                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
+                    3</a></li>
+            </ul>
+        </main>
+    </div>
 </div>
 
 <footer class="footer wow bounceInUp" data-wow-duration="2s">

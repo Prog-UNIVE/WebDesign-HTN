@@ -102,51 +102,70 @@
                 <div class="decor decor-1 center-block"></div>
                 <ol class="breadcrumb">
                     <li><a href="index.html">home</a></li>
-                    <li><a href="signup-step-1.html">Prima</a></li>
-                    <li><a href="signup-step-2.html">Seconda</a></li>
-                    <li class="active">Fase finale</li>
+                    <li>registrazione</li>
+                    <li class="active">pagamento</li>
                 </ol>
             </div><!-- end block-title-content -->
         </div>
     </div><!-- end block-title -->
 </section>
+
 <div class="container">
-    <div class="col-sm-10 col-sm-push-1">
-        <form action="#" role="form" class="well">
-            <h3>Metodo di pagamento</h3>
-            <div class="form-group col-md-6">
-                <label for="doc">Carta di credito</label>
-                <select class="form-control" id="doc" required>
-                    <option hidden>Seleziona un tipo di carta</option>
-                    <option>American Express</option>
-                    <option>Visa</option>
-                    <option>Master Card</option>
-                </select>
+    <div class="row">
+        <main class="col-xs-12 main-content">
+            <div class="card">
+                <form action="#" role="form" method="post">
+                    <h3>Metodo di pagamento</h3>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="doc">Carta di credito</label>
+                            <select class="form-control" id="doc" required>
+                                <option hidden>Seleziona un tipo di carta</option>
+                                <option>American Express</option>
+                                <option>Visa</option>
+                                <option>Master Card</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="nameCarta">Nome che appare sulla carta</label>
+                            <input id="nameCarta" type="text" class="form-control" placeholder="Nome carta" required>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 form-group">
+                                    <label for="numberCarta">Numero carta</label>
+                                    <input id="numberCarta" type="text" class="form-control" placeholder="Numero carta"
+                                           required>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input id="cvv" type="text" class="form-control" placeholder="CVV" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <a class="btn btn-primary pull-left" href="signup-step-2.html">
+                                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrcedente
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 form-group">
+                            <button class="btn btn-primary pull-right" type="submit">Registrati</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group col-md-6">
-                <label for="numberCarta">Numero carta</label>
-                <input id="numberCarta" type="text" class="form-control" placeholder="Numero carta" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="nameCarta">Nome che appare sulla carta</label>
-                <input id="nameCarta" type="text" class="form-control" placeholder="Nome carta" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="cvv">CVV</label>
-                <input id="cvv" type="text" class="form-control" placeholder="CVV" required>
-            </div>
-            <ul class="pager">   <!-- TODO - premendo termina visualizzare pop-up che dice  "iscrizione avvenuta" -->
-                <li class="previous"><a href="signup-step-2.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrecendente</a></li>
-                <li class="next"><a href="#" onclick="form.submit();">Termina&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
-            </ul>
-        </form>
+        </main>
     </div>
 </div>
 
-<div class="jumbotron text-center">
-    <h2>Hai bisogno di aiuto?</h2>
-    <p><a class="btn btn-primary btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
-</div>
+<section class="section section-content bg-primary text-center">
+    <h2 class="section-title">Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-default btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
+</section>
 
 <footer class="footer wow bounceInUp" data-wow-duration="2s">
     <section class="section section-content bg-secondary footer-content">
@@ -167,7 +186,8 @@
 
             <div class="row footer-row">
                 <ul class="col-xs-12 list-inline">
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567
+                    </li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
                         1234567@gmail.com

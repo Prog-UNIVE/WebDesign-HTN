@@ -102,94 +102,75 @@
                 <div class="decor decor-1 center-block"></div>
                 <ol class="breadcrumb">
                     <li><a href="index.html">home</a></li>
-                    <li class="active">Prima fase registrazione</li>
+                    <li>registrazione</li>
+                    <li class="active">account</li>
                 </ol>
             </div><!-- end block-title-content -->
         </div>
     </div><!-- end block-title -->
 </section>
+
 <div class="container">
-    <div class="col-sm-10 col-sm-offset-1">
-        <form action="#" role="form" class="well">
-            <h3>Account</h3>
-            <div class="form-group col-xs-12">
-                <label for="username">Username</label>
-                <input id="username" type="text" class="form-control" placeholder="Username" required>
+    <div class="row">
+        <main class="col-xs-12 main-content">
+            <div class="card">
+                <form action="signup-step-2.html" role="form" method="post">
+                    <h3>Account</h3>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="passwd">Password</label>
+                            <input id="passwd" type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="confermaPasswd">Conferma Password</label>
+                            <input id="confermaPasswd" type="password" class="form-control"
+                                   placeholder="Conferma password"
+                                   required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="repeatEmail">Ripeti email</label>
+                            <input id="repeatEmail" type="text" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" required>Accetto i <a href="#">Termini e Condizioni
+                                    d'uso</a></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox">Iscrizione alla newsletter</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-6">
+                                <button class="btn btn-primary pull-right" type="submit">
+                                    Successiva&nbsp<span class="glyphicon glyphicon-arrow-right"
+                                                         aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group col-md-6">
-                <label for="passwd">Password</label>
-                <input id="passwd" type="password" class="form-control" placeholder="Password" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="confermaPasswd">Conferma Password</label>
-                <input id="confermaPasswd" type="password" class="form-control" placeholder="Conferma password" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input id="email" type="text" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="repeatEmail">Ripeti email</label>
-                <input id="repeatEmail" type="text" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="form-group col-md-6">
-                <div class="checkbox">
-                    <label><input type="checkbox" required>Accetto i <a href="#">Termini e Condizioni d'uso</a></label>
-                </div>
-            </div>
-            <div class="form-group col-md-6">
-                <div class="checkbox">
-                    <label><input type="checkbox">Iscrizione alla newsletter</label>
-                </div>
-            </div>
-            <h3>Dati anagrafici</h3>
-            <div class="form-group col-md-6">
-                <label for="name">Nome</label>
-                <input id="name" type="text" class="form-control" placeholder="Nome" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="surname">Cognome</label>
-                <input id="surname" type="text" class="form-control" placeholder="Cognome" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="birthday">Data di nascita</label>
-                <input id="birthday" type="date" name="bday" class="form-control" placeholder="Data nascita" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="codiceFiscale">Codice Fiscale</label>
-                <input id="codiceFiscale" type="text" class="form-control" placeholder="Codice fiscale" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="doc">Documento di identità</label>
-                <select class="form-control" id="doc" required>
-                    <option hidden>Seleziona un tipo di documento</option>
-                    <option>Carta d'identità</option>
-                    <option>Passaporto</option>
-                </select>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="numDoc">Numedo del documento</label>
-                <input id="numDoc" type="text" class="form-control" placeholder="Numero del documento" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="dateReleaseDoc">Data rilascio del documento</label>
-                <input id="dateReleaseDoc" type="date" name="releaseDoc" class="form-control" placeholder="Data rilascio" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="scdDoc">Data scadenza del documento</label>
-                <input id="scdDoc" type="date" name="scdDoc" class="form-control" placeholder="Data scadenza" required>
-            </div>
-            <ul class="pager">
-                <li class="next"><a href="signup-step-2.html" onclick="form.submit();">Successiva&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
-            </ul>
-        </form>
+        </main>
     </div>
 </div>
 
-<div class="jumbotron text-center">
-    <h2>Hai bisogno di aiuto?</h2>
-    <p><a class="btn btn-primary btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
-</div>
+<section class="section section-content bg-primary text-center">
+    <h2 class="section-title">Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-default btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
+</section>
 
 <footer class="footer wow bounceInUp" data-wow-duration="2s">
     <section class="section section-content bg-secondary footer-content">
@@ -210,7 +191,8 @@
 
             <div class="row footer-row">
                 <ul class="col-xs-12 list-inline">
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567
+                    </li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
                         1234567@gmail.com

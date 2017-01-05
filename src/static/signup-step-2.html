@@ -102,83 +102,169 @@
                 <div class="decor decor-1 center-block"></div>
                 <ol class="breadcrumb">
                     <li><a href="index.html">home</a></li>
-                    <li><a href="signup-step-1.html">Prima</a></li>
-                    <li class="active">Seconda fase registrazione</li>
+                    <li>registrazione</li>
+                    <li class="active">anagrafica</li>
                 </ol>
             </div><!-- end block-title-content -->
         </div>
     </div><!-- end block-title -->
 </section>
+
 <div class="container">
-    <div class="col-sm-10 col-sm-push-1">
-        <form action="#" role="form" class="well">
-            <h3>Recapiti</h3>
-            <div class="form-group col-md-6">
-                <label for="number">Numero cellulare</label>
-                <input id="number" type="text" class="form-control" placeholder="Numero del cellulare" required>
+    <div class="row">
+        <main class="col-xs-12 main-content">
+            <div class="card">
+                <form action="signup-step-3.html" role="form" method="post">
+                    <h3>Dati anagrafici</h3>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="name">Nome</label>
+                            <input id="name" type="text" class="form-control" placeholder="Nome" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="surname">Cognome</label>
+                            <input id="surname" type="text" class="form-control" placeholder="Cognome" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="birthday">Data di nascita</label>
+                            <input id="birthday" type="date" name="bday" class="form-control" placeholder="Data nascita"
+                                   required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="codiceFiscale">Codice Fiscale</label>
+                            <input id="codiceFiscale" type="text" class="form-control" placeholder="Codice fiscale"
+                                   required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="doc">Documento di identità</label>
+                            <select class="form-control" id="doc" required>
+                                <option hidden>Seleziona un tipo di documento</option>
+                                <option>Carta d'identità</option>
+                                <option>Passaporto</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="numDoc">Numedo del documento</label>
+                            <input id="numDoc" type="text" class="form-control" placeholder="Numero del documento"
+                                   required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="dateReleaseDoc">Data rilascio del documento</label>
+                            <input id="dateReleaseDoc" type="date" name="releaseDoc" class="form-control"
+                                   placeholder="Data rilascio" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="scdDoc">Data scadenza del documento</label>
+                            <input id="scdDoc" type="date" name="scdDoc" class="form-control"
+                                   placeholder="Data scadenza"
+                                   required>
+                        </div>
+                    </div>
+
+                    <h3>Recapiti</h3>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="number">Numero cellulare</label>
+                            <input id="number" type="text" class="form-control" placeholder="Numero del cellulare"
+                                   required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="fisso">Numero Tel. Fisso</label>
+                            <input id="fisso" type="text" class="form-control" placeholder="Numero tel. fisso" required>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 form-group">
+                                    <label for="comune">Comune di residenza</label>
+                                    <input id="comune" type="text" class="form-control" placeholder="Comune residenza"
+                                           required>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 form-group">
+                                    <label for="cap">CAP</label>
+                                    <input id="cap" type="text" class="form-control" placeholder="CAP" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 form-group">
+                                    <label for="idnResidenza">Indirizzo residenza</label>
+                                    <input id="idnResidenza" type="text" class="form-control"
+                                           placeholder="Indirizzo residenza"
+                                           required>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 form-group">
+                                    <label for="idnResidenza">Numero</label>
+                                    <input id="numeroResidenza" type="text" class="form-control" placeholder="N°"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Recapiti per la fatturazione</h3>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" required>Utilizza lo stesso indirizzo come domicilio
+                                    fiscale
+                                    per l'intestazione delle fatture</a></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 form-group ">
+                                    <label for="comuneF">Comune di residenza</label>
+                                    <input id="comuneF" type="text" class="form-control" placeholder="Comune residenza"
+                                           required>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 form-group">
+                                    <label for="capF">CAP</label>
+                                    <input id="capF" type="text" class="form-control" placeholder="CAP" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 form-group">
+                                    <label for="idnResidenzaF">Indirizzo residenza</label>
+                                    <input id="idnResidenzaF" type="text" class="form-control"
+                                           placeholder="Indirizzo residenza"
+                                           required>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 form-group">
+                                    <label for="idnResidenzaF">Numero</label>
+                                    <input id="numeroResidenzaF" type="text" class="form-control" placeholder="N°"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <a class="btn btn-primary pull-left" href="signup-step-1.html">
+                                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrcedente
+                                </a>
+                            </div>
+                            <div class="col-xs-6 form-group">
+                                <button class="btn btn-primary pull-right" type="submit">
+                                    Successiva&nbsp<span class="glyphicon glyphicon-arrow-right"
+                                                         aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group col-md-6">
-                <label for="fisso">Numero Tel. Fisso</label>
-                <input id="fisso" type="text" class="form-control" placeholder="Numero tel. fisso" required>
-            </div>
-            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
-                <div class="form-group col-xs-9">
-                    <label for="comune">Comune di residenza</label>
-                    <input id="comune" type="text" class="form-control" placeholder="Comune residenza" required>
-                </div>
-                <div class="form-group col-xs-3">
-                    <label for="cap">CAP</label>
-                    <input id="cap" type="text" class="form-control" placeholder="CAP" required>
-                </div>
-            </div>
-            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
-                <div class="form-group col-xs-9">
-                    <label for="idnResidenza">Indirizzo residenza</label>
-                    <input id="idnResidenza" type="text" class="form-control" placeholder="Indirizzo residenza" required>
-                </div>
-                <div class="form-group col-xs-3">
-                    <label for="idnResidenza">Numero</label>
-                    <input id="numeroResidenza" type="text" class="form-control" placeholder="N°" required>
-                </div>
-            </div>
-            <h3>Recapiti per la fatturazione</h3> <!-- TODO - Alla pressione del checkbox impostare i dati presi dagli input precedenti su quelli sottostanti (con grafica disable) -->
-            <div class="form-group col-xs-12">
-                <div class="checkbox">
-                    <label><input type="checkbox" required>Utilizza lo stesso indirizzo come domicilio fiscale per l'intestazione delle fatture</a></label>
-                </div>
-            </div>
-            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
-                <div class="form-group col-xs-9">
-                    <label for="comuneF">Comune di residenza</label>
-                    <input id="comuneF" type="text" class="form-control" placeholder="Comune residenza" required>
-                </div>
-                <div class="form-group col-xs-3">
-                    <label for="capF">CAP</label>
-                    <input id="capF" type="text" class="form-control" placeholder="CAP" required>
-                </div>
-            </div>
-            <div class="col-md-6">  <!-- TODO - sistemare i vari margini di questo div -->
-                <div class="form-group col-xs-9">
-                    <label for="idnResidenzaF">Indirizzo residenza</label>
-                    <input id="idnResidenzaF" type="text" class="form-control" placeholder="Indirizzo residenza" required>
-                </div>
-                <div class="form-group col-xs-3">
-                    <label for="idnResidenzaF">Numero</label>
-                    <input id="numeroResidenzaF" type="text" class="form-control" placeholder="N°" required>
-                </div>
-            </div>
-            <ul class="pager">
-                <li class="previous"><a href="signup-step-1.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbspPrecendente</a></li>
-                <li class="next"><a href="signup-step-3.html" onclick="form.submit();">Successiva&nbsp<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
-            </ul>
-        </form>
+        </main>
     </div>
 </div>
 
-<div class="jumbotron text-center">
-    <h2>Hai bisogno di aiuto?</h2>
-    <p><a class="btn btn-primary btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
-</div>
+<section class="section section-content bg-primary text-center">
+    <h2 class="section-title">Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-default btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
+</section>
 
 <footer class="footer wow bounceInUp" data-wow-duration="2s">
     <section class="section section-content bg-secondary footer-content">
@@ -199,7 +285,8 @@
 
             <div class="row footer-row">
                 <ul class="col-xs-12 list-inline">
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567
+                    </li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
                         1234567@gmail.com

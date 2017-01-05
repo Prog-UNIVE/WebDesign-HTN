@@ -7,14 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 90%;
-            padding: 0;
-            margin:0;
-        }
+
+
         /* Optional: Makes the sample page fill the window. */
         html, body {
             height: 100%;
@@ -22,67 +20,45 @@
             padding: 0;
         }
 
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
 
-        <!-- -->
-
-        body {
-            font-family: "Lato", sans-serif;
-        }
-
-        .sidenav {
+        .map-container {
+            position: relative;
             height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 52px;
-            left: 0;
-            background-color: #111;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .map {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar {
+            position: absolute;
+            max-height: 100%;
+            z-index: 101;
+            top: 0;
+            left: 0px;
             overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-        .sidenav p{
-            margin-bottom:0px;
-        }
-        .sidenav hr{
-            margin: 5px 0 5px 0;
+
+            width: 358px;
+            height: 100%;
+            overflow-y: auto;
         }
 
-        .sidenav li {
-            margin: 0px 30px 0px 30px;
-            text-decoration: none;
-            font-size: 17px;
-            color: #818181;
-            display: block;
-            transition: 0.3s
-        }
-
-        .sidenav a:hover, .offcanvas a:focus{
-            text-decoration: none;
-            color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
+        .sidebar .closebtn {
             position: absolute;
             top: 0;
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
         }
-
-        .title-li{
-            padding:20px 0px 20px 18px;
-            background-color: gainsboro;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-        }
     </style>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page autozone file:// -->
@@ -93,178 +69,190 @@
 </head>
 <body id="body-top" class="layout-theme animated-css">
 <!-- Top menu -->
-<nav class="navbar yamm navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="https://placehold.it/100x20?text=Your+Logo">
-            </a>
-            <button type="button" class="navbar-toggle text-center"
-                    data-toggle="collapse" data-target="#main-menu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<header class="header no-affix">
+    <nav class="navbar navbar-fixed-top navbar-autozone yamm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="https://placehold.it/100x45?text=Your+Logo">
+                </a>
+                <button type="button" class="navbar-toggle collapsed text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="text-center" href="./">Home</a></li>
+                    <li><a class="text-center" href="news.html">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="#">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Orari prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="#">Carburante</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li><a class="text-center" href="services.html">Servizi</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="login.html">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="signup-step-1.html">Registrazione</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            <span class="sr-only">Cerca</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <form action="search.html" method="get" class="form-search">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="search">Search</label>
+                                            <input id="search" class="form-control"
+                                                   placeholder="Cerca..." type="text">
+                                        </div>
+                                        <button class="btn btn-default form-search__submit" type="submit">
+                                            <i class="icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="main-menu">
-            <ul class="nav navbar-nav">
-                <li class="active"><a class="text-center" href="#">Home</a></li>
-                <li><a class="text-center" href="#">News</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Come funziona<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Assicurazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Orari prenotazione</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Carburante</a></li>
-                    </ul>
-                </li>
-                <li><a class="text-center" href="#">FAQ</a></li>
-                <li><a class="text-center" href="#">Prenotazione</a></li>
-                <li><a class="text-center" href="#">Servizi</a></li>
-                <li><a class="text-center" href="#">Chi siamo</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Area riservata<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="text-center" href="#">Login-in</a></li>
-                        <li class="divider"></li>
-                        <li><a class="text-center" href="#">Registrazione</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
-                        <span class="fa fa-search" aria-hidden="true"></span>
-                        <span class="sr-only">Cerca</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <form method="get" class="form-search">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="search">Search</label>
-                                        <input id="search" class="form-control"
-                                               placeholder="Cerca..." type="text">
-                                    </div>
-                                    <button class="btn btn-default form-search__submit" type="submit">
-                                        <i class="icon fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    </nav>
+</header>
+
+<div class="row map-container">
+    <div class="map-container">
+        <main id="map" class=" map"></main>
     </div>
-</nav>
+    <aside class="col-xs-12 col-sm-4 sidebar">
+        <ul class="list-unstyled">
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p>200 Veicoli disponibili</small></p>
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p><strong>BMW i8</strong><br>
+                            <small>12 Veicoli disponibili</small>
+                        </p>
+                    </div>
+                    <div class="col-xs-3 checkbox text-right">
+                        <input type="checkbox" id="checkbox1"/>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p><strong>Tesla P100D</strong><br>
+                            <small>7 Veicoli disponibili</small>
+                        </p>
+                    </div>
+                    <div class="col-xs-3 checkbox text-right">
+                        <input type="checkbox" id="checkbox2"/>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p><strong>Audi A3 e-tron</strong><br>
+                            <small>53 Veicoli disponibili</small>
+                        </p>
+                    </div>
+                    <div class="col-xs-3 checkbox text-right">
+                        <input type="checkbox" id="checkbox3"/>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p><strong>Golf GTE</strong><br>
+                            <small>89 Veicoli disponibili</small>
+                        </p>
+                    </div>
+                    <div class="col-xs-3 checkbox text-right">
+                        <input type="checkbox" id="checkbox4"/>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <label for="seggiolino">Seggiolino</label>
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <select id="seggiolino">
+                            <option selected="selected">Tutti</option>
+                            <option>No</option>
+                            <option>Si</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <hr>
+            <li>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <label for="seggiolino">Cambio automatico</label>
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <select id="cambio">
+                            <option selected="selected">Tutti</option>
+                            <option>No</option>
+                            <option>Si</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
 
-<div id="mySidenav" class="sidenav">
-    <ul class="list-unstyled">
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p>200 Veicoli disponibili</small></p>
-                </div>
-                <div class="col-xs-3 text-right">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                </div>
+        </ul>
+        <div class="title-li">
+            <div class="col-xs-12">
+                <p>ALTRE OPZIONI</p>
             </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p><strong>BMW i8</strong><br><small>12 Veicoli disponibili</small></p>
-                </div>
-                <div class="col-xs-3 checkbox text-right">
-                    <input type="checkbox" id="checkbox1"/>
-                </div>
-            </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p><strong>Tesla P100D</strong><br><small>7 Veicoli disponibili</small></p>
-                </div>
-                <div class="col-xs-3 checkbox text-right">
-                    <input type="checkbox" id="checkbox2"/>
-                </div>
-            </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p><strong>Audi A3 e-tron</strong><br><small>53 Veicoli disponibili</small></p>
-                </div>
-                <div class="col-xs-3 checkbox text-right">
-                    <input type="checkbox" id="checkbox3"/>
-                </div>
-            </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p><strong>Golf GTE</strong><br><small>89 Veicoli disponibili</small></p>
-                </div>
-                <div class="col-xs-3 checkbox text-right">
-                    <input type="checkbox" id="checkbox4"/>
-                </div>
-            </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <label for="seggiolino">Seggiolino</label>
-                </div>
-                <div class="col-xs-3 text-right">
-                    <select id="seggiolino">
-                        <option selected="selected">Tutti</option>
-                        <option>No</option>
-                        <option>Si</option>
-                    </select>
-                </div>
-            </div>
-        </li>
-        <hr>
-        <li>
-            <div class="row">
-                <div class="col-xs-9">
-                    <label for="seggiolino">Cambio automatico</label>
-                </div>
-                <div class="col-xs-3 text-right">
-                    <select id="cambio">
-                        <option selected="selected">Tutti</option>
-                        <option>No</option>
-                        <option>Si</option>
-                    </select>
-                </div>
-            </div>
-        </li>
-
-    </ul>
-    <div class="title-li">
-        <div class="col-xs-12">
-            <p>ALTRE OPZIONI</p>
         </div>
-    </div>
-
+    </aside>
 </div>
 
-
-
-<div id="map"></div>
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
 
 
 <script>
@@ -273,73 +261,77 @@
     // failed.", it means you probably did not give permission for the browser to
     // locate you.
 
-    function CenterControl(controlDiv, map) {
+    /*function CenterControl(controlDiv, map) {
 
-        // Set CSS for the control border.
-        var controlUI = document.createElement('div');
-        controlUI.style.backgroundColor = '#fff';
-        controlUI.style.alignment = left;
-        controlUI.style.marginLeft = '100px';
-        controlDiv.appendChild(controlUI);
+     // Set CSS for the control border.
+     var controlUI = document.createElement('div');
+     controlUI.style.backgroundColor = '#fff';
+     controlUI.style.alignment = left;
+     controlUI.style.marginLeft = '100px';
+     controlDiv.appendChild(controlUI);
 
-        // Set CSS for the control interior.
-        var controlText = document.createElement('div');
-        controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-        controlText.innerHTML = '<span style=\"font-size:30px;cursor:pointer\" onclick=\"openNav()\">&#9776;</span>';
-        controlUI.appendChild(controlText);
+     // Set CSS for the control interior.
+     var controlText = document.createElement('div');
+     controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+     controlText.innerHTML = '<span style=\"font-size:30px;cursor:pointer\" onclick=\"openNav()\">&#9776;</span>';
+     controlUI.appendChild(controlText);
 
-        // Setup the click event listeners: simply set the map to Chicago.
-        controlUI.addEventListener('click', function() {
-            map.setCenter(chicago);
-        });
+     // Setup the click event listeners: simply set the map to Chicago.
+     controlUI.addEventListener('click', function () {
+     map.setCenter(chicago);
+     });
 
-    }
+     }*/
 
     function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
+
+        var mapCanvas = document.getElementById("map");
+
+        var map = new google.maps.Map(mapCanvas, {
             center: {lat: -34.397, lng: 150.644},
             zoom: 6
         });
-        var infoWindow = new google.maps.InfoWindow({map: map});
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
+        /*var infoWindow = new google.maps.InfoWindow({map: map});
 
-                infoWindow.setPosition(pos);
-                infoWindow.setContent('Location found.');
-                map.setCenter(pos);
-            }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
-        } else {
-            // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, map.getCenter());
-        }
+         // Try HTML5 geolocation.
+         if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(function (position) {
+         var pos = {
+         lat: position.coords.latitude,
+         lng: position.coords.longitude
+         };
 
-        // Create the DIV to hold the control and call the CenterControl()
-        // constructor passing in this DIV.
-        var centerControlDiv = document.createElement('div');
-        var centerControl = new CenterControl(centerControlDiv, map);
+         infoWindow.setPosition(pos);
+         infoWindow.setContent('Location found.');
+         map.setCenter(pos);
+         }, function () {
+         handleLocationError(true, infoWindow, map.getCenter());
+         });
+         } else {
+         // Browser doesn't support Geolocation
+         handleLocationError(false, infoWindow, map.getCenter());
+         }
 
-        centerControlDiv.index = 1;
-        map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+         // Create the DIV to hold the control and call the CenterControl()
+         // constructor passing in this DIV.
+         var centerControlDiv = document.createElement('div');
+         var centerControl = new CenterControl(centerControlDiv, map);
+
+         centerControlDiv.index = 1;
+         map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);*/
     }
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-    }
+    /*function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+     infoWindow.setPosition(pos);
+     infoWindow.setContent(browserHasGeolocation ?
+     'Error: The Geolocation service failed.' :
+     'Error: Your browser doesn\'t support geolocation.');
+     }*/
 </script>
+
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyBt2qvalmz_L9JfHjflhS5eiFP5TER7bCA">
-</script>
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDax0fW4hGXS7pqUS4HDa-0itmNBat4PCE "></script>
 
 <script>
     function openNav() {
@@ -350,75 +342,5 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 </script>
-
-<footer class="footer wow bounceInUp" data-wow-duration="2s">
-    <section class="section section-content bg-secondary footer-content">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="footer-title">auto <span class="text-primary">zone</span></h2>
-                    <div class="decor-1 decor-1_mod-b"></div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="text-secondary">: Sede uffici :</p>
-                    <p>Via Torino 155, Mestre 30172 (VE), Veneto, Italia</p>
-                </div>
-            </div>
-
-            <div class="row footer-row">
-                <ul class="col-xs-12 list-inline">
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
-                        1234567@gmail.com
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Orario:</span> Lun-Ven ::
-                        9-18
-                    </li>
-                </ul>
-            </div>
-
-            <div class="row footer-row">
-                <div class="col-xs-12">
-                    <ul class="social-links list-inline">
-                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
-                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
-                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
-                        </li>
-                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row footer-row">
-                <div class="col-xs-12">
-                    <ul class="nav nav-pills nav-justified">
-                        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
-                        <li><a href="contact-us.html"><i class="fa fa-phone"></i> Contattaci</a></li>
-                        <li><a href="index-map.html"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="top">
-        <div class="top-container">
-            <a class="text-center scroll" href="#body-top">
-                <div class="top-triangle"></div>
-                <span>Top</span>
-            </a>
-        </div>
-    </div>
-    <div class="copyright text-center">
-        Copyrights © 2015 - 2016 <a class="" href="#">autozone</a> - Tutti i diritti riservati
-    </div>
-</footer>
-
-<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
-<script src="js/app.js"></script>
 </body>
 </html>
