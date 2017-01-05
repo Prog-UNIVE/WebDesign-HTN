@@ -123,24 +123,19 @@
         <h3 class="section-title">NON ESITARE A INVIARCI UN MESSAGGIO</h3>
         <div class="row">
             <form class="col-xs-12 col-md-8 col-md-offset-2" action="#" role="form">
-                <div class="row form-group">
-                    <!-- TODO - sistemare spaziatura tra i primi 2 input in visualizzazione XS -->
-                    <div class="col-xs-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Nome" id="name" required>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Nome" required>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Cognome" id="surname" required>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <input type="text" class="form-control" name="surname" id="surname" placeholder="Cognome"
+                               required>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <div class="col-xs-12 form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <!-- TODO - sistemare spaziatura tra i primi 2 input in visualizzazione XS -->
-                    <div class="col-xs-12 col-sm-6">
-                        <select class="form-control" id="city" required>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <select class="form-control" name="city" id="city" required>
                             <option hidden>Città di riferimento</option>
                             <option>Città 1</option>
                             <option>Città 2</option>
@@ -148,8 +143,8 @@
                             <option>Città 4</option>
                         </select>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <select class="form-control" id="oggetto" required>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <select class="form-control" name="object" id="object" required>
                             <option hidden>Seleziona un argomento</option>
                             <!-- TODO - se avanza tempo fare come enjoy -->
                             <option>Argomento 1</option>
@@ -157,10 +152,9 @@
                             <option>Argomento 3</option>
                         </select>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-xs-12">
-                        <textarea class="form-control" rows="5" id="message" placeholder="Messaggio..." required></textarea>
+                    <div class="col-xs-12 form-group">
+                            <textarea class="form-control" rows="5" name="message" id="message"
+                                      placeholder="Messaggio..." required></textarea>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-default text-center">Invia il messaggio</button>
