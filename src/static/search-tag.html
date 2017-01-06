@@ -17,8 +17,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
-<div id="body-top" class="layout-theme animated-css">
+<body id="body-top" class="layout-theme animated-css">
 <!-- Top menu -->
 <!-- Top menu -->
 <header class="header">
@@ -119,9 +118,9 @@
             <form role="form">
                 <div class="input-group">
                     <input type="text" class="form-control" id="testo" placeholder="Cerca per...">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit">Cerca</button>
-                 </span>
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Cerca</button>
+                    </div>
                 </div>
                 <div class="form-inline">
                     <h3>Filtra per:</h3>
@@ -142,12 +141,16 @@
 
             <h3>Elenco risultati:</h3>
             <ul class="list-unstyled">
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
-                    1</a></li>
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
-                    2</a></li>
-                <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp<a href="#">Risultato
-                    3</a></li>
+                <li>
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp
+                    <a href="#">Risultato 1</a>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp
+                    <a href="#">Risultato 2</a></li>
+                <li>
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>&nbsp
+                    <a href="#">Risultato 3</a></li>
             </ul>
         </main>
     </div>
@@ -172,7 +175,8 @@
 
             <div class="row footer-row">
                 <ul class="col-xs-12 list-inline">
-                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567
+                    </li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
                     <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
                         1234567@gmail.com
