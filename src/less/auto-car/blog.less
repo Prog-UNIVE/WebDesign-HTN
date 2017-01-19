@@ -13,7 +13,7 @@
   margin-bottom: 40px;
 
   &:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    .box-shadow(~"0 0 10px 0 rgba(0, 0, 0, 0.1)");
     .entry-btn {
       opacity: 1;
     }
@@ -42,7 +42,7 @@
       max-height: 100%;
       overflow: hidden;
       background-color: @brand-primary;
-      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.22);
+      .box-shadow(~"0 0 0 5px rgba(255, 255, 255, 0.22)");
       border-radius: 1px;
 
       span {
@@ -113,7 +113,7 @@
     margin-left: 10px;
 
     border-radius: 1px;
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.22);
+    .box-shadow(~"0 0 0 5px rgba(255, 255, 255, 0.22)");
     transform: rotate(45deg);
     background-color: @brand-primary;
 
@@ -270,7 +270,7 @@
 .post-nav {
   margin-top: 45px;
   background: @white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .box-shadow(~"0 0 10px 0 rgba(0, 0, 0, 0.1)");
 
   .decor {
     margin-top: -2px;
@@ -397,13 +397,12 @@
     border-radius: 0px;
     border-bottom: 1px solid transparent;
     background-color: #f5f5f5;
-    box-shadow: none;
-    -o-box-shadow: none;
+    .box-shadow(none);
 
     &:focus {
       background-color: #fff;
       border-bottom-color: @brand-primary;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      .box-shadow(~"0 0 10px 0 rgba(0, 0, 0, 0.1)");
     }
   }
 
