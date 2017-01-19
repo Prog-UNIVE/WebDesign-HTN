@@ -125,6 +125,8 @@ elixir(function (mix) {
         config.bowerPath + '/wow/dist/wow.js',
         config.bowerPath + '/waypoints/lib/jquery.waypoints.js',
         config.bowerPath + '/flexslider/jquery.flexslider.js',
+        config.bowerPath + '/bootstrap-toggle/js/bootstrap-toggle.js',
+        config.bowerPath + '/js-marker-clusterer/src/markerclusterer.js',
         config.assetsPath + '/js/app.js',
     ], config.publicPath + '/js/app.js', '.')
         .header(

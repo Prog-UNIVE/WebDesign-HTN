@@ -179,7 +179,7 @@
     height: 80px;
     content: '';
     left: -70px;
-    box-shadow: 4px 1px 0 2px @body-bg;
+   .box-shadow(~"4px 1px 0 2px @{body-bg}");
     transform: skew(-58deg, 10deg);
     background-color: @bg-primary;
     z-index: 1;
@@ -191,7 +191,7 @@
     height: 80px;
     content: '';
     right: -70px;
-    box-shadow: -4px 1px 0 2px @body-bg;
+    .box-shadow(~"-4px 1px 0 2px @{body-bg}");
     transform: skew(58deg, -10deg);
     background-color: @bg-primary;
   }
@@ -269,6 +269,7 @@
   top: 0;
   right: 0;
   left: 0;
+  padding-top: 3px;
   width: 100%;
   z-index: 1030;
   color: @white;
@@ -285,7 +286,6 @@
 
   .navbar-autozone {
     position: relative;
-    margin-top: 3px;
     margin-bottom: 0px;
     background-color: transparent;
     border: none;
@@ -320,7 +320,7 @@
         &:focus {
           color: @white;
           background-color: transparent;
-          box-shadow: 0 -5px 0 0 @brand-primary;
+          .box-shadow(~"0 -5px 0 0 @{brand-primary}");
         }
       }
       > .active > a {
@@ -329,7 +329,7 @@
         &:focus {
           color: @white;
           background-color: transparent;
-          box-shadow: 0 -5px 0 0 @brand-primary;
+          .box-shadow(~"0 -5px 0 0 @{brand-primary}");
         }
       }
       > .disabled > a {

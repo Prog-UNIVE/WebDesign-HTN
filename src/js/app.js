@@ -23,16 +23,6 @@ $(document).ready(function () {
 
     "use strict";
 
-    /////////////////////////////////////
-    //  LOADER
-    /////////////////////////////////////
-/*
-    var $preloader = $('#page-preloader'),
-        $spinner = $preloader.find('.spinner-loader');
-    $spinner.fadeOut();
-    $preloader.delay(50).fadeOut('slow');
-*/
-
 /////////////////////////////////////////////////////////////////
 // SETTING
 /////////////////////////////////////////////////////////////////
@@ -148,7 +138,7 @@ $(document).ready(function () {
 /////////////////////////////////////
 //  Disable Mobile Animated
 /////////////////////////////////////
-/*
+
     if (windowWidth < mobileWidth) {
 
         $("body").removeClass("animated-css");
@@ -166,7 +156,7 @@ $(document).ready(function () {
         triggerOnce: true,
         offset: '90%'
     });
-*/
+
 
 //////////////////////////////
 // Animated Entrances
@@ -245,23 +235,12 @@ $(document).ready(function () {
 
 
 /////////////////////////////////////////////////////////////////
-// Ð¡ustomization select
+// Customization select
 /////////////////////////////////////////////////////////////////
 
     $('.jelect').select2();
 
 
-/////////////////////////////////////
-//  Zoom Images
-/////////////////////////////////////
-
-
-   /* $(".slider-product a").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000});
-
-
-    $("a[rel^='prettyPhoto']").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000});
-
-*/
 /////////////////////////////////////////////////////////////////
 // Accordion
 /////////////////////////////////////////////////////////////////
@@ -277,48 +256,6 @@ $(document).ready(function () {
         }
         ;
     });*/
-
-
-/////////////////////////////////////////////////////////////////
-// Filter accordion
-/////////////////////////////////////////////////////////////////
-
-
- /*   $('.js-filter').on('click', function () {
-        $(this).prev('.wrap-filter').slideToggle('slow')
-    });
-
-    $('.js-filter').on('click', function () {
-        $(this).toggleClass('filter-up filter-down')
-    });
-*/
-
-////////////////////////////////////////////
-// CAROUSEL PRODUCTS
-///////////////////////////////////////////
-
-
-  /*  if ($('#slider-product').length > 0) {
-
-        // The slider being synced must be initialized first
-        $('#carousel-product').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            itemWidth: 84,
-            itemMargin: 8,
-            asNavFor: '#slider-product'
-        });
-
-        $('#slider-product').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#carousel-product"
-        });
-    }*/
 
 
 /////////////////////////////////////////////////////////////////
