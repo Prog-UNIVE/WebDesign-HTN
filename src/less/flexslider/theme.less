@@ -4,13 +4,12 @@
   background: @flexslider-bg;
   border: @flexslider-border;
   position: relative;
-  zoom: 1;
 
   .slides {
-    zoom: 1;
-
     img {
+      width: 100%;
       height: auto;
+      .object-fit(~"cover");
       -moz-user-select: none;
     }
   }
@@ -18,7 +17,6 @@
 
 .flex-viewport {
   max-height: @flexslider-viewport-max-height;
-  //.transition();
 
   .loading & {
     max-height: @flexslider-viewport-loading-max-height;

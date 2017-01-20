@@ -317,7 +317,7 @@ img.pull-left {
     padding: @padding-base-vertical @padding-base-horizontal;
     .box-shadow(none);
 
-    &:hover{
+    &:hover {
       color: @brand-primary;
     }
   }
@@ -705,27 +705,25 @@ img.pull-left {
 
 /* Main slider */
 .main-slider {
+  height: 100%;
   overflow: hidden;
 
-  /* Caption
-  *********************************/
   .slides {
     li {
       position: relative;
     }
+
+    img {
+      height: 450px;
+      .object-fit(~"cover");
+    }
   }
 
   .flex-caption {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    max-width: 40%;
-    padding: 20px 20px 120px;
-    margin-left: 12vw;
-    display: inline-block;
-    font-size: 15px;
+    padding: 20px 70px 70px;
+    background-color: @gray;
     color: @white;
-    background: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
 
     .btn-main {
       &:hover {
@@ -733,73 +731,136 @@ img.pull-left {
         text-decoration: none;
       }
     }
-  }
 
-  .main-slider-title {
-    font-size: 40px;
-    font-weight: 700;
-    color: @white;
-    text-transform: uppercase;
-
-
-  }
-
-  .main-slider-subtitle {
-    margin-bottom: 25px;
-    font-family: @font-family-Raleway;
-    font-size: 26px;
-    font-weight: 500;
-  }
-
-  .main-slider-body {
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  .main-slider-btn {
-    display: inline-block;
-    padding: 7px 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: skewX(16deg);
-
-    span {
-      display: inline-block;
-      width: 120px;
-      font-family: @font-family-Ubuntu;
+    .main-slider-title {
+      font-size: 20px;
+      font-weight: 400;
       color: @white;
-      transform: skewX(-16deg);
-      text-align: center;
       text-transform: uppercase;
     }
 
-    &:hover {
+    .main-slider-subtitle {
+      margin-bottom: 10px;
+      font-family: @font-family-Raleway;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .decor {
+      margin-bottom: 10px;
+    }
+
+    .main-slider-body {
+    }
+
+    .main-slider-btn {
+      display: inline-block;
+      padding: 7px 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: skewX(16deg);
+
+      span {
+        display: inline-block;
+        width: 120px;
+        color: @white;
+        transform: skewX(-16deg);
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background-color: @brand-primary;
+      }
+    }
+
+    .main-slider-price {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+
+    .main-slider-link {
+      display: inline-block;
+      width: 24px;
+      height: 34px;
+      margin-left: 16px;
+      vertical-align: middle;
+      transform: skewX(-16deg);
+      text-align: center;
       background-color: @brand-primary;
+
+      .icon {
+        font-size: 16px;
+        color: @white;
+        line-height: 34px;
+        vertical-align: baseline;
+        transform: skewX(16deg);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+
+        .icon {
+          color: @white;
+        }
+      }
     }
   }
 
-  .main-slider-price {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: 500;
-    vertical-align: middle;
+  @media (min-width: @screen-md-min) {
+    .slides {
+      img {
+        height: 500px;
+      }
+    }
+
+    .flex-caption {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      max-width: 40%;
+      margin-left: 12vw;
+      display: inline-block;
+      color: @white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px 100px;
+      font-size: 18px;
+
+      .main-slider-title {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .main-slider-subtitle {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
   }
 
-  .main-slider-link {
-    display: inline-block;
-    width: 36px;
-    height: 38px;
-    margin-top: 5px;
-    margin-left: 20px;
-    padding-top: 8px;
-    vertical-align: middle;
-    transform: skewX(-16deg);
-    text-align: center;
-    background-color: @brand-primary;
+  @media (min-width: @screen-lg-min) {
 
-    .icon {
-      font-size: 15px;
-      color: @white;
-      transform: skewX(16deg);
+    .slides {
+      img {
+        height: 700px;
+      }
+    }
+
+    .flex-caption {
+      padding: 20px 20px 120px;
+
+      .main-slider-title {
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .main-slider-subtitle {
+        margin-bottom: 25px;
+        font-size: 26px;
+        font-weight: 500;
+      }
     }
   }
 }

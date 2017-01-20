@@ -234,6 +234,7 @@
     background-color: @bg-primary;
     z-index: 1;
   }
+
   &:after {
     position: absolute;
     top: -16px;
@@ -339,8 +340,10 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  &.affix-top.affix-home {
-    background-color: rgba(0, 0, 0, 0.5);
+  @media (min-width: @grid-float-breakpoint) {
+    &.affix-top.affix-home {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
 
   .navbar-autozone {
