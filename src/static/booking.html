@@ -24,7 +24,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <img alt="Brand" src="https://placehold.it/100x45?text=Your+Logo">
+                    <img alt="Brand" src="img/logo/NC.png">
                 </a>
                 <button type="button" class="navbar-toggle collapsed text-center"
                         data-toggle="collapse" data-target="#main-menu">
@@ -36,7 +36,7 @@
             </div>
             <div class="collapse navbar-collapse" id="main-menu">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="text-center" href="./">Home</a></li>
+                    <li><a class="text-center" href="./">Home</a></li>
                     <li><a class="text-center" href="news.html">News</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
@@ -54,7 +54,7 @@
                             <li><a class="text-center" href="services.html">Servizi</a></li>
                         </ul>
                     </li>
-                    <li><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li class="active"><a class="text-center" href="booking.html">Prenotazione</a></li>
                     <li><a class="text-center" href="our-cars.html">Flotta</a></li>
                     <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
                 </ul>
@@ -145,33 +145,33 @@
                             <form>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label>BMW i8</label>
                                             <span class="help-block">12 Veicoli disponibili</span>
                                         </div>
-                                        <div class="col-xs-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="bmw" name="bmw" checked data-toggle="toggle" type="checkbox">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label>Tesla P100D</label>
                                             <span class="help-block">7 Veicoli disponibili</span>
                                         </div>
-                                        <div class="col-sm-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="tesla" name="tesla" checked data-toggle="toggle" type="checkbox">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label>Audi A3 e-tron</label>
                                             <span class="help-block">53 Veicoli disponibili</span>
                                         </div>
-                                        <div class="col-sm-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="audi-a3" name="audi-a3" checked data-toggle="toggle"
                                                    type="checkbox">
                                         </div>
@@ -179,21 +179,21 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label>Golf GTE</label>
                                             <span class="help-block">89 Veicoli disponibili</span>
                                         </div>
-                                        <div class="col-sm-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="gte" name="gte" checked data-toggle="toggle" type="checkbox">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label for="seggiolino">Seggiolino</label>
                                         </div>
-                                        <div class="col-sm-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="seggiolino" name="seggiolino" checked data-toggle="toggle"
                                                    type="checkbox">
                                         </div>
@@ -201,10 +201,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="col-xs-9">
+                                        <div class="col-xs-8">
                                             <label for="auto-gearbox">Cambio automatico</label>
                                         </div>
-                                        <div class="col-sm-3 text-right">
+                                        <div class="col-xs-4 text-right">
                                             <input id="auto-gearbox" name="gearbox" checked data-toggle="toggle"
                                                    type="checkbox">
                                         </div>
@@ -301,14 +301,30 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Modal title</h4>
+                <h4 class="modal-title">Prenotazione</h4>
             </div>
             <div class="modal-body">
-                <p>One fine body&hellip;</p>
+                <p>Hai scelto di prenotare il veicolo xyz.</p>
+                <form class="form-horizontal">
+                    <p>Scegli la data di ritiro e di consegna</p>
+                    <p class="help-block">Ti ricordiamo che puoi prenotare a partire da domani</p>
+                    <div class="form-group">
+                        <label for="pickupDate" class="col-sm-2 control-label">Data Ritiro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="datepicker form-control" id="pickupDate" placeholder="GG/MM/AAAA">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate" class="col-sm-2 control-label">Data Rientro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="datepicker form-control" id="endDate" placeholder="GG/MM/AAAA">
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <a href="history.html" type="button" class="btn btn-primary">Save changes</a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
