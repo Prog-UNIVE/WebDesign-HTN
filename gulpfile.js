@@ -110,6 +110,8 @@ elixir(function (mix) {
 
     // FontAwesome Fonts
     mix.copy(config.bowerPath + '/components-font-awesome/fonts/', config.publicPath + '/fonts/');
+    //FlexSlider Fonts
+    mix.copy(config.bowerPath + '/flexslider/fonts/', config.publicPath + '/fonts/');
 
 
     // JS

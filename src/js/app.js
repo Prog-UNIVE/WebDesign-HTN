@@ -34,26 +34,26 @@ $(document).ready(function () {
     var tabletWidth = 767;
     var mobileWidth = 640;
 
-/*
-    ////////////////////////////////////////////
-    //  Animate the scroll to top
-    ///////////////////////////////////////////
+
+////////////////////////////////////////////
+//  Animate the scroll to top
+///////////////////////////////////////////
 
 
-    $(function () {
-        $('.scroll[href*=#]:not([href=#])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });*/
+    /*$(function () {
+     $('.scroll[href*=#]:not([href=#])').click(function () {
+     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+     var target = $(this.hash);
+     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+     if (target.length) {
+     $('html,body').animate({
+     scrollTop: target.offset().top
+     }, 1000);
+     return false;
+     }
+     }
+     });
+     });*/
 
 
 /////////////////////////////////////
@@ -81,119 +81,60 @@ $(document).ready(function () {
     /////////////////////////////////////
     //  HOME PAGE SLIDER
     /////////////////////////////////////
-/*
-    var sliderpro1 = $('#sliderpro1');
 
+    $('.main-slider').flexslider({
+        animation: 'fade', 		   //String: Select your animation type, "fade" or "slide"
+        controlNav: false,   	  //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        directionNav: true,		 //Boolean: Create navigation for previous/next navigation? (true/false)
+        slideshowSpeed: 7000,   //Integer: Set the speed of the slideshow cycling, in milliseconds
+        animationSpeed: 600,   //Integer: Set the speed of animations, in milliseconds
+        pauseOnHover: true,   //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+        prevText: "",        //String: Set the text for the "previous" directionNav item
+        nextText: "",		//String: Set the text for the "next" directionNav item
 
-    if (sliderpro1.length > 0) {
-
-        sliderpro1.sliderPro({
-            width: 2000,
-            height: 900,
-            fade: true,
-            arrows: true,
-            buttons: false,
-            waitForLayers: false,
-            thumbnailPointer: false,
-            touchSwipe: false,
-            autoplay: true,
-            autoScaleLayers: true
-
-        });
-
-    }
-*/
-/////////////////////////////////////////////////////////////////
-//   Dropdown Menu Fade
-/////////////////////////////////////////////////////////////////
-
-
-    /*$(".dropdown").hover(
-        function () {
-            $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-            $(this).toggleClass('open');
+        before: function (slider) {
+            $(slider).find(".flex-active-slide").find('.flex-caption').each(function () {
+                $(this).removeClass("animated fadeInRight");
+                $(this).addClass("animated fadeOut");
+            });
         },
-        function () {
-            $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-            $(this).toggleClass('open');
-        }
-    );
-
-
-    $(".yamm .navbar-nav>li").hover(
-        function () {
-            $('.dropdown-menu', this).fadeIn("fast");
+        after: function (slider) {
+            $(slider).find(".flex-active-slide").find('.flex-caption').removeClass("animated fadeOut").addClass("animated fadeInRight");
         },
-        function () {
-            $('.dropdown-menu', this).fadeOut("fast");
-        });
-
-
-    window.prettyPrint && prettyPrint();
-    $(document).on('click', '.yamm .dropdown-menu', function (e) {
-        e.stopPropagation();
-    });*/
-
+    });
 
 /////////////////////////////////////
 //  Disable Mobile Animated
 /////////////////////////////////////
 
     if (windowWidth < mobileWidth) {
-
         $("body").removeClass("animated-css");
-
     }
 
 
     $('.animated-css .animated:not(.animation-done)').waypoint(function () {
-
         var animation = $(this).data('animation');
-
         $(this).addClass('animation-done').addClass(animation);
-
     }, {
         triggerOnce: true,
         offset: '90%'
     });
 
-
-//////////////////////////////
-// Animated Entrances
-//////////////////////////////
-
-/*
-    if (windowWidth > 1200) {
-
-        $(window).scroll(function () {
-            $('.animatedEntrance').each(function () {
-                var imagePos = $(this).offset().top;
-
-                var topOfWindow = $(window).scrollTop();
-                if (imagePos < topOfWindow + 400) {
-                    $(this).addClass("slideUp"); // slideUp, slideDown, slideLeft, slideRight, slideExpandUp, expandUp, fadeIn, expandOpen, bigEntrance, hatch
-                }
-            });
-        });
-
-    }
-*/
-
 /////////////////////////////////////////////////////////////////
 // Accordion
 /////////////////////////////////////////////////////////////////
 
-   /* $(".btn-collapse").on('click', function () {
-        $(this).parents('.panel-group').children('.panel').removeClass('panel-default');
-        $(this).parents('.panel').addClass('panel-default');
-        if ($(this).is(".collapsed")) {
-            $('.panel-title').removeClass('panel-passive');
-        }
-        else {
-            $(this).next().toggleClass('panel-passive');
-        }
-        ;
-    });*/
+    /* $(".btn-collapse").on('click', function () {
+     $(this).parents('.panel-group').children('.panel').removeClass('panel-default');
+     $(this).parents('.panel').addClass('panel-default');
+     if ($(this).is(".collapsed")) {
+     $('.panel-title').removeClass('panel-passive');
+     }
+     else {
+     $(this).next().toggleClass('panel-passive');
+     }
+     ;
+     });*/
 
 
 /////////////////////////////////////
@@ -239,159 +180,6 @@ $(document).ready(function () {
 /////////////////////////////////////////////////////////////////
 
     $('.jelect').select2();
-
-
-/////////////////////////////////////////////////////////////////
-// Accordion
-/////////////////////////////////////////////////////////////////
-
-/*    $(".btn-collapse").on('click', function () {
-        $(this).parents('.panel-group').children('.panel').removeClass('panel-default');
-        $(this).parents('.panel').addClass('panel-default');
-        if ($(this).is(".collapsed")) {
-            $('.panel-title').removeClass('panel-passive');
-        }
-        else {
-            $(this).next().toggleClass('panel-passive');
-        }
-        ;
-    });*/
-
-
-/////////////////////////////////////////////////////////////////
-//PRICE RANGE
-/////////////////////////////////////////////////////////////////
-
-
-  /*  if ($('#slider-price').length > 0) {
-
-
-        $("#slider-price").noUiSlider({
-            start: [15000, 35000],
-            step: 500,
-            connect: true,
-            range: {
-                'min': 0,
-                'max': 50000
-            },
-
-            // Full number format support.
-            format: wNumb({
-                decimals: 0,
-                prefix: '$'
-            })
-        });
-        // Reading/writing + validation from an input? One line.
-        $('#slider-price').Link('lower').to($('#slider-price_min'));
-
-        // Write to a span? One line.
-        $('#slider-price').Link('upper').to($('#slider-price_max'));
-
-    }*/
-
-
-/////////////////////////////////////////////////////////////////
-// Sliders
-/////////////////////////////////////////////////////////////////
-/*
-    var Core = {
-
-        initialized: false,
-
-        initialize: function () {
-
-            if (this.initialized) return;
-            this.initialized = true;
-
-            this.build();
-
-        },
-
-        build: function () {
-
-            // Owl Carousel
-
-            this.initOwlCarousel();
-        },
-        initOwlCarousel: function (options) {
-
-            $(".enable-owl-carousel").each(function (i) {
-                var $owl = $(this);
-
-                var itemsData = $owl.data('items');
-                var navigationData = $owl.data('navigation');
-                var paginationData = $owl.data('pagination');
-                var singleItemData = $owl.data('single-item');
-                var autoPlayData = $owl.data('auto-play');
-                var transitionStyleData = $owl.data('transition-style');
-                var mainSliderData = $owl.data('main-text-animation');
-                var afterInitDelay = $owl.data('after-init-delay');
-                var stopOnHoverData = $owl.data('stop-on-hover');
-                var min480 = $owl.data('min480');
-                var min768 = $owl.data('min768');
-                var min992 = $owl.data('min992');
-                var min1200 = $owl.data('min1200');
-
-                $owl.owlCarousel({
-                    navigation: navigationData,
-                    pagination: paginationData,
-                    singleItem: singleItemData,
-                    autoPlay: autoPlayData,
-                    transitionStyle: transitionStyleData,
-                    stopOnHover: stopOnHoverData,
-                    navigationText: ["<i></i>", "<i></i>"],
-                    items: itemsData,
-                    itemsCustom: [
-                        [0, 1],
-                        [465, min480],
-                        [750, min768],
-                        [975, min992],
-                        [1185, min1200]
-                    ],
-                    afterInit: function (elem) {
-                        if (mainSliderData) {
-                            setTimeout(function () {
-                                $('.main-slider_zoomIn').css('visibility', 'visible').removeClass('zoomIn').addClass('zoomIn');
-                                $('.main-slider_fadeInLeft').css('visibility', 'visible').removeClass('fadeInLeft').addClass('fadeInLeft');
-                                $('.main-slider_fadeInLeftBig').css('visibility', 'visible').removeClass('fadeInLeftBig').addClass('fadeInLeftBig');
-                                $('.main-slider_fadeInRightBig').css('visibility', 'visible').removeClass('fadeInRightBig').addClass('fadeInRightBig');
-                            }, afterInitDelay);
-                        }
-                    },
-                    beforeMove: function (elem) {
-                        if (mainSliderData) {
-                            $('.main-slider_zoomIn').css('visibility', 'hidden').removeClass('zoomIn');
-                            $('.main-slider_slideInUp').css('visibility', 'hidden').removeClass('slideInUp');
-                            $('.main-slider_fadeInLeft').css('visibility', 'hidden').removeClass('fadeInLeft');
-                            $('.main-slider_fadeInRight').css('visibility', 'hidden').removeClass('fadeInRight');
-                            $('.main-slider_fadeInLeftBig').css('visibility', 'hidden').removeClass('fadeInLeftBig');
-                            $('.main-slider_fadeInRightBig').css('visibility', 'hidden').removeClass('fadeInRightBig');
-                        }
-                    },
-                    afterMove: sliderContentAnimate,
-                    afterUpdate: sliderContentAnimate,
-                });
-            });
-            function sliderContentAnimate(elem) {
-                var $elem = elem;
-                var afterMoveDelay = $elem.data('after-move-delay');
-                var mainSliderData = $elem.data('main-text-animation');
-                if (mainSliderData) {
-                    setTimeout(function () {
-                        $('.main-slider_zoomIn').css('visibility', 'visible').addClass('zoomIn');
-                        $('.main-slider_slideInUp').css('visibility', 'visible').addClass('slideInUp');
-                        $('.main-slider_fadeInLeft').css('visibility', 'visible').addClass('fadeInLeft');
-                        $('.main-slider_fadeInRight').css('visibility', 'visible').addClass('fadeInRight');
-                        $('.main-slider_fadeInLeftBig').css('visibility', 'visible').addClass('fadeInLeftBig');
-                        $('.main-slider_fadeInRightBig').css('visibility', 'visible').addClass('fadeInRightBig');
-                    }, afterMoveDelay);
-                }
-            }
-        },
-
-    };
-
-    Core.initialize();*/
 
 });
 

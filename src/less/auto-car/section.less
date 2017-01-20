@@ -204,6 +204,12 @@
       background-image: url('../img/bg/6.jpg');
     }
   }
+
+  &.section-bg-9 {
+    &:before {
+      background-image: url('../img/bg/6.jpg');
+    }
+  }
 }
 
 //= Sections Top & Bottom drawing
@@ -328,6 +334,15 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
+  @media (max-width: @grid-float-breakpoint-max) {
+    position: relative !important;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &.affix-top.affix-home {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .navbar-autozone {
     position: relative;
     margin-bottom: 0px;
@@ -421,6 +436,10 @@
       .form-control {
         color: @white;
         background: transparent;
+
+        &:focus {
+          border-color: @white;
+        }
       }
 
       .btn {
