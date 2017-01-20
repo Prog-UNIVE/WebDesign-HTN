@@ -15,6 +15,22 @@
 
   &.bg-primary {
     color: @white;
+
+    .list-progress {
+      li {
+        .list-progress-content {
+          border: 2px solid @white;
+
+          .icon {
+            border-bottom: 1px solid @white;
+          }
+
+          .list-progress-text {
+            color: @white;
+          }
+        }
+      }
+    }
   }
 
   &.bg-secondary {
@@ -23,6 +39,22 @@
 
   .bg-primary {
     color: @white;
+
+    .list-progress {
+      li {
+        .list-progress-content {
+          border: 2px solid @white;
+
+          .icon {
+            border-bottom: 1px solid @white;
+          }
+
+          .list-progress-text {
+            color: @white;
+          }
+        }
+      }
+    }
   }
 
   .bg-secondary {
@@ -160,6 +192,18 @@
       background-image: url('../img/bg/3.jpg');
     }
   }
+
+  &.section-bg-5 {
+    &:before {
+      background-image: url('../img/bg/5.jpg');
+    }
+  }
+
+  &.section-bg-6 {
+    &:before {
+      background-image: url('../img/bg/6.jpg');
+    }
+  }
 }
 
 //= Sections Top & Bottom drawing
@@ -179,7 +223,7 @@
     height: 80px;
     content: '';
     left: -70px;
-   .box-shadow(~"4px 1px 0 2px @{body-bg}");
+    .box-shadow(~"4px 1px 0 2px @{body-bg}");
     transform: skew(-58deg, 10deg);
     background-color: @bg-primary;
     z-index: 1;

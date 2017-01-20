@@ -15,13 +15,15 @@
         .carousel-fade .carousel-inner .item {
             opacity: 0;
             transition-property: opacity;
-            overflow:hidden;
+            overflow: hidden;
         }
+
         .item.active img {
             transition: transform 5000ms linear 0s;
             /* This should be based on your carousel setting. For bs, it should be 5second*/
             transform: scale(1.05, 1.05);
         }
+
         .carousel-fade .carousel-inner .active {
             opacity: 1;
         }
@@ -53,12 +55,14 @@
                 -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
             }
+
             .carousel-fade .carousel-inner > .item.prev,
             .carousel-fade .carousel-inner > .item.active.left {
                 opacity: 0;
                 -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
             }
+
             .carousel-fade .carousel-inner > .item.next.left,
             .carousel-fade .carousel-inner > .item.prev.right,
             .carousel-fade .carousel-inner > .item.active {
@@ -68,14 +72,14 @@
             }
         }
 
-        .carousel-text-background{
+        .carousel-text-background {
             background: rgba(0, 0, 0, 0.5);
             filter: alpha(opacity=80); /* Compatibility with IE8 & prev. */
         }
     </style>
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="img/logo/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/logo/favicon.ico"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page autozone file:// -->
@@ -231,7 +235,7 @@
 
 <section class="section section-bg section-bg-1">
     <div class="container section-content">
-        <div class="row">
+        <div class="row link-block-container">
             <div class="col-xs-12 col-sm-12 col-md-4 col-md-push-4 wow bounceInUp">
                 <div class="text-center">
                     <p class="lead">Benvenuti su</p>
@@ -263,18 +267,23 @@
             </div>
             <div class="col-sm-6 wow bounceInRight">
                 <h2 class="section-title-inner">Caratteristiche principali</h2>
+                <div class="decor decor-1"></div>
                 <ul class="list-unstyled">
                     <li>
-                        <i class="icon fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
                     </li>
                     <li>
-                        <i class="icon fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
                     </li>
                     <li>
-                        <i class="icon fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
                     </li>
                     <li>
-                        <i class="icon fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
                     </li>
                 </ul>
             </div>
@@ -368,27 +377,27 @@
                     exercitation ullamco.
                 </p>
                 <p>
-                    <i class="fa fa-caret-right"></i>
-                    Guarda anche il nostro servizio per i <a href="services.html#accessibility">diversamente abili</a>.
+                    <a href="services.html#accessibility" class="section-link"> Guarda anche il nostro servizio per i
+                        diversamente abili</a>.
                 </p>
             </div>
             <div class="col-sm-6">
                 <h2 class="section-title-inner">In città:</h2>
                 <ul class="list-unstyled">
                     <li>
-                        <i class="fa fa-caret-right"></i>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
                         <strong> Parcheggi:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </li>
                     <li>
-                        <i class="fa fa-caret-right"></i>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
                         <strong> Accessi ZTL:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </li>
                     <li>
-                        <i class="fa fa-caret-right"></i>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
                         <strong> Ristorazione:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </li>
                     <li>
-                        <i class="fa fa-caret-right"></i>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
                         <strong> Carburante/Ricarica:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </li>
                 </ul>
@@ -455,7 +464,7 @@
     </div>
 </section>
 
-<section class="section section-bg section-bg-cover section-bg-1 bg-secondary wow bounceInUp">
+<section class="section section-bg section-bg-cover section-bg-6 bg-secondary wow bounceInUp">
     <div class="container section-content">
         <h2 class="section-title text-center">Contattaci</h2>
         <p class="text-justify">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
