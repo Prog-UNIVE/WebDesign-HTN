@@ -139,19 +139,6 @@ elixir(function (mix) {
 
     //
 
-    // /*
-    //  * Theme
-    //  */
-    // // Less
-    // mix.less('app.less', config.publicPath + '/style.css')
-    //     .header(fs.readFileSync('HEADER', 'utf8'), config.publicPath + '/style.css', config.publicPath + '/style.css', config.publicPath);
-    // mix.less('rtl.less', config.publicPath + '/rtl.css')
-    //     .header(fs.readFileSync('HEADER', 'utf8'), config.publicPath + '/rtl.css', config.publicPath + '/rtl.css', config.publicPath);
-    //
-    // // JS
-    // mix.scripts('widget.js');
-    // mix.scripts('scripts.js');
-
     // Imgs & SVGs & Static
     mix.copy('src/img/', config.publicPath + '/img');
     mix.copy('src/svg/', config.publicPath + '/svg');
