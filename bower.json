@@ -32,6 +32,8 @@
     "waypoints": "^4.0.1",
     "flexslider": "^2.6.3",
     "bootstrap-toggle": "^2.2.2",
-    "js-marker-clusterer": "*"
+    "js-marker-clusterer": "*",
+    "object-fit-images": "*",
+    "bootstrap-datepicker": "^1.6.4"
   }
 }
