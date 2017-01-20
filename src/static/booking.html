@@ -337,10 +337,10 @@
             console.log('BtnZoom Plus');
             $(this).unbind('active');
 
-            if((map.getZoom() + 1) > map.maxZoom){
+            if ((map.getZoom() + 1) > map.maxZoom) {
                 console.log('BtnZoom Overflow');
                 $(this).attr('disabled', 'disabled');
-            }else {
+            } else {
                 zoomMinusBtn.removeAttr('disabled');
                 map.setZoom(map.getZoom() + 1);
             }
@@ -350,10 +350,10 @@
             console.log('BtnZoom Minus');
             $(this).unbind('active');
 
-            if((map.getZoom() - 1) < map.minZoom){
+            if ((map.getZoom() - 1) < map.minZoom) {
                 console.log('BtnZoom Overflow');
                 $(this).attr('disabled', 'disabled');
-            }else {
+            } else {
                 zoomPlusBtn.removeAttr('disabled');
                 map.setZoom(map.getZoom() - 1);
             }
@@ -366,19 +366,37 @@
         });
     }
 
-    function geolocateUser(map){
+    function geolocateUser(map, userMarker) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                var pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-                map.setCenter(pos);
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                map.setCenter(latlng);
+
+                if (userMarker == null) {
+                    console.log('Crete user location marker');
+                    userMarker = new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                        icon: './img/gmaps/marker_user_position.png'
+                    });
+                } else {
+                    console.log('Update user location marker');
+                    userMarker.setPosition(latlng);
+                }
             }, function () {
                 console.log("Browser geolocation not working!");
+                if (userMarker != null) {
+                    console.log('Delete user location marker');
+                    userMarker.setMap(null);
+                }
             });
         } else {
             console.log("Browser geolocation not supported!");
+            if (userMarker != null) {
+                console.log('Delete user location marker');
+                userMarker.setMap(null);
+            }
         }
     }
 
@@ -387,6 +405,7 @@
 
         var gmap;
         var gmapControl;
+        var userMarker = null;
         var carMarkers;
 
         var mapCanvas = $('#map');
@@ -396,6 +415,37 @@
             keyboard: false,
             show: false
         });
+
+        var mcOptions = {
+            gridSize: 54,
+            ignoreHidden: true,
+            averageCenter: true,
+            styles: [
+                {
+                    url: './img/gmaps/marker_cluster.png',
+                    height: 54,
+                    width: 54,
+                    textColor: '#ffffff',
+                    textSize: 10
+                }
+            ],
+            calculator: function (markers, numStyles) {
+
+                var index = 0;
+                var title = "";
+                var count = markers.length;
+
+                index = 1;
+
+                index = Math.min(index, numStyles);
+
+                return {
+                    text: count.toString(),
+                    index: index,
+                    title: title
+                };
+            }
+        };
 
         gmap = new google.maps.Map(mapCanvas[0], {
             center: {lat: 45.43750, lng: 12.33583},
@@ -411,7 +461,7 @@
         gmap.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv[0]);
 
         // Try HTML5 geolocation.
-        geolocateUser(gmap);
+        geolocateUser(gmap, userMarker);
 
         var searchBox = new google.maps.places.SearchBox(input[0]);
         searchBox.addListener('places_changed', function () {
@@ -456,7 +506,8 @@
         // The map() method here has nothing to do with the Google Maps API.
         carMarkers = carLocations.map(function (location, i) {
             var marker = new google.maps.Marker({
-                position: location
+                position: location,
+                icon: './img/gmaps/marker_car.png'
             });
 
             google.maps.event.addListener(marker, 'click', function () {
@@ -468,34 +519,42 @@
         });
 
         // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(gmap, carMarkers,
-                {imagePath: 'https://enjoy.eni.com/img/map/marker_cluster'});
+        var markerCluster = new MarkerClusterer(gmap, carMarkers, mcOptions);
     }
 
     var carLocations = [
-        {lat: -31.563910, lng: 147.154312},
-        {lat: -33.718234, lng: 150.363181},
-        {lat: -33.727111, lng: 150.371124},
-        {lat: -33.848588, lng: 151.209834},
-        {lat: -33.851702, lng: 151.216968},
-        {lat: -34.671264, lng: 150.863657},
-        {lat: -35.304724, lng: 148.662905},
-        {lat: -36.817685, lng: 175.699196},
-        {lat: -36.828611, lng: 175.790222},
-        {lat: -37.750000, lng: 145.116667},
-        {lat: -37.759859, lng: 145.128708},
-        {lat: -37.765015, lng: 145.133858},
-        {lat: -37.770104, lng: 145.143299},
-        {lat: -37.773700, lng: 145.145187},
-        {lat: -37.774785, lng: 145.137978},
-        {lat: -37.819616, lng: 144.968119},
-        {lat: -38.330766, lng: 144.695692},
-        {lat: -39.927193, lng: 175.053218},
-        {lat: -41.330162, lng: 174.865694},
-        {lat: -42.734358, lng: 147.439506},
-        {lat: -42.734358, lng: 147.501315},
-        {lat: -42.735258, lng: 147.438000},
-        {lat: -43.999792, lng: 170.463352}
+        {lat: 45.4863945, lng: 12.238000899999975},
+        {lat: 45.4844572, lng: 12.242627200000015},
+        {lat: 45.4890829, lng: 12.24598119999996},
+        {lat: 45.4858398, lng: 12.25635729999999},
+        {lat: 45.4818274, lng: 12.258516500000042},
+        {lat: 45.4804641, lng: 12.249414900000033},
+        {lat: 45.4756248, lng: 12.252206099999967},
+        {lat: 45.4799769, lng: 12.24689710000007},
+        {lat: 45.4821081, lng: 12.280057800000009},
+        {lat: 45.4885905, lng: 12.273399299999937},
+        {lat: 45.4928754, lng: 12.26418250000006},
+        {lat: 45.4977086, lng: 12.265673099999958},
+        {lat: 45.4980200, lng: 12.286122200000023},
+        {lat: 45.4813118, lng: 12.272855100000015},
+        {lat: 45.4819454, lng: 12.291124099999934},
+
+        {lat: 45.4450245, lng: 9.158608400000048},
+        {lat: 45.4417436, lng: 9.15292020000004},
+        {lat: 45.4448853, lng: 9.150807100000065},
+        {lat: 45.4521969, lng: 9.157800100000031},
+        {lat: 45.4539982, lng: 9.172729200000049},
+        {lat: 45.4585959, lng: 9.17348400000003},
+        {lat: 45.4551948, lng: 9.178736999999956},
+        {lat: 45.4554126, lng: 9.190073999999981},
+        {lat: 45.4541691, lng: 9.192984900000056},
+        {lat: 45.4529027, lng: 9.193885899999941},
+        {lat: 45.4558893, lng: 9.20258560000002},
+        {lat: 45.4635047, lng: 9.202783899999986},
+        {lat: 45.4723574, lng: 9.210651600000006},
+        {lat: 45.4788620, lng: 9.19002039999998},
+        {lat: 45.4833578, lng: 9.183012299999973},
+        {lat: 45.4862079, lng: 9.161885299999994},
     ]
 </script>
 
