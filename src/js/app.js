@@ -34,6 +34,7 @@ $(document).ready(function () {
     var tabletWidth = 767;
     var mobileWidth = 640;
 
+    $(function () { objectFitImages() });
 
 ////////////////////////////////////////////
 //  Animate the scroll to top
@@ -83,14 +84,17 @@ $(document).ready(function () {
     /////////////////////////////////////
 
     $('.main-slider').flexslider({
-        animation: 'fade', 		   //String: Select your animation type, "fade" or "slide"
-        controlNav: false,   	  //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-        directionNav: true,		 //Boolean: Create navigation for previous/next navigation? (true/false)
+        animation: 'fade', 		//String: Select your animation type, "fade" or "slide"
+        controlNav: false,   	//Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        directionNav: true,		//Boolean: Create navigation for previous/next navigation? (true/false)
         slideshowSpeed: 7000,   //Integer: Set the speed of the slideshow cycling, in milliseconds
-        animationSpeed: 600,   //Integer: Set the speed of animations, in milliseconds
-        pauseOnHover: true,   //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-        prevText: "",        //String: Set the text for the "previous" directionNav item
-        nextText: "",		//String: Set the text for the "next" directionNav item
+        animationSpeed: 600,    //Integer: Set the speed of animations, in milliseconds
+        pauseOnHover: true,     //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+        prevText: "",           //String: Set the text for the "previous" directionNav item
+        nextText: "",		    //String: Set the text for the "next" directionNav item
+        useCSS: true,           //{NEW} Boolean: Slider will use CSS3 transitions if available
+        touch: true,            //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
+        pauseInvisible: true,   //{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
 
         before: function (slider) {
             $(slider).find(".flex-active-slide").find('.flex-caption').each(function () {
@@ -180,6 +184,23 @@ $(document).ready(function () {
 /////////////////////////////////////////////////////////////////
 
     $('.jelect').select2();
+
+/////////////////////////////////////////////////////////////////
+// Customization datepicker
+/////////////////////////////////////////////////////////////////
+
+    var tomorrow = new Date();
+     tomorrow.setDate(tomorrow.getDate() + 1);
+
+    $('.datepicker').datepicker({
+        format: "dd/mm/yyyy",
+        weekStart: 1,
+        startDate: tomorrow,
+        todayBtn: "linked",
+        clearBtn: true,
+        language: "it",
+        orientation: "bottom auto"
+    });
 
 });
 
