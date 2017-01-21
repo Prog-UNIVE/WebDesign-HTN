@@ -243,42 +243,20 @@ img.pull-left {
 }
 
 .accordion {
-  .panel-heading {
-    .btn-collapse {
-      position: absolute;
-      top: 15px;
-      left: -29px;
-      display: block;
-    }
-    .collapsed {
-      .btn-collapse {
-        background-color: transparent;
-      }
-    }
-  }
-  .panel {
-    .icon {
-      float: right;
-      width: 45px;
-      background-color: transparent;
-      text-align: center;
-    }
-  }
   .btn-collapse {
-    .icon {
-      font: normal normal 30px Raleway;
-      line-height: 1;
+    .glyphicon {
       &:before {
-        display: block;
-        content: '-';
+        content: "\e260";
       }
     }
   }
-  .btn-collapse.collapsed {
-    .icon {
-      &:before {
-        margin-top: 1px;
-        content: '+';
+
+  .btn-collapse {
+    &.collapsed {
+      .glyphicon {
+        &:before {
+          content: "\e259";
+        }
       }
     }
   }

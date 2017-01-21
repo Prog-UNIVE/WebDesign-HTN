@@ -67,10 +67,9 @@ $(document).ready(function () {
 /////////////////////////////////////
 
     if (windowWidth > tabletWidth) {
-
         $('.header').affix({
             offset: 50
-        })
+        });
 
         $('.header').on('affix.bs.affix', function () {
             $('.header').addClass("animated");
@@ -124,27 +123,12 @@ $(document).ready(function () {
     $('.animated-css .animated:not(.animation-done)').waypoint(function () {
         var animation = $(this).data('animation');
         $(this).addClass('animation-done').addClass(animation);
+
+        new WOW().init();
     }, {
         triggerOnce: true,
         offset: '90%'
     });
-
-/////////////////////////////////////////////////////////////////
-// Accordion
-/////////////////////////////////////////////////////////////////
-
-    /* $(".btn-collapse").on('click', function () {
-     $(this).parents('.panel-group').children('.panel').removeClass('panel-default');
-     $(this).parents('.panel').addClass('panel-default');
-     if ($(this).is(".collapsed")) {
-     $('.panel-title').removeClass('panel-passive');
-     }
-     else {
-     $(this).next().toggleClass('panel-passive');
-     }
-     ;
-     });*/
-
 
 /////////////////////////////////////
 //  Chars Start
@@ -209,9 +193,3 @@ $(document).ready(function () {
     });
 
 });
-
-
-/////////////////////////////////////////////////////////////////
-// Animated WOW
-/////////////////////////////////////////////////////////////////
-new WOW().init();
