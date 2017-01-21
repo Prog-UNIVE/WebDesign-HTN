@@ -34,28 +34,33 @@ $(document).ready(function () {
     var tabletWidth = 767;
     var mobileWidth = 640;
 
-    $(function () { objectFitImages() });
+    $(function () {
+        objectFitImages()
+    });
 
 ////////////////////////////////////////////
 //  Animate the scroll to top
 ///////////////////////////////////////////
 
+    $('.scroll').on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    /*$(function () {
-     $('.scroll[href*=#]:not([href=#])').click(function () {
-     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-     var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-     if (target.length) {
-     $('html,body').animate({
-     scrollTop: target.offset().top
-     }, 1000);
-     return false;
-     }
-     }
-     });
-     });*/
+            // Store hash
+            var hash = this.hash;
 
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        }
+    });
 
 /////////////////////////////////////
 //  Sticky Header
@@ -159,7 +164,6 @@ $(document).ready(function () {
         });
     }
 
-
     function CharsStart() {
         $('.chart').easyPieChart({
             barColor: false,
@@ -178,13 +182,13 @@ $(document).ready(function () {
 
     }
 
-
 /////////////////////////////////////////////////////////////////
 // Customization select
 /////////////////////////////////////////////////////////////////
 
     $('.jelect').select2({
-        theme: "netcar"
+        theme: "netcar",
+        minimumResultsForSearch: 5
     });
 
 /////////////////////////////////////////////////////////////////
@@ -192,7 +196,7 @@ $(document).ready(function () {
 /////////////////////////////////////////////////////////////////
 
     var tomorrow = new Date();
-     tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setDate(tomorrow.getDate() + 1);
 
     $('.datepicker').datepicker({
         format: "dd/mm/yyyy",
