@@ -183,7 +183,9 @@ $(document).ready(function () {
 // Customization select
 /////////////////////////////////////////////////////////////////
 
-    $('.jelect').select2();
+    $('.jelect').select2({
+        theme: "netcar"
+    });
 
 /////////////////////////////////////////////////////////////////
 // Customization datepicker
