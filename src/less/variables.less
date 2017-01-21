@@ -171,9 +171,9 @@
 @btn-link-disabled-color:        @gray-light;
 
 // Allows for customizing button radius independently from global border radius
-@btn-border-radius-base:         @border-radius-base;
-@btn-border-radius-large:        @border-radius-large;
-@btn-border-radius-small:        @border-radius-small;
+@btn-border-radius-base:         0px;  // @border-radius-base
+@btn-border-radius-large:        0px; // @border-radius-large
+@btn-border-radius-small:        0px; // @border-radius-small
 
 
 //== Forms
@@ -186,21 +186,21 @@
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    @gray-light; //@gray
 //** `<input>` border color
 @input-border:                   #ccc;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            0px; // @border-radius-base
 //** Large `.form-control` border radius
-@input-border-radius-large:      @border-radius-large;
+@input-border-radius-large:      0px; // border-radius-large
 //** Small `.form-control` border radius
-@input-border-radius-small:      @border-radius-small;
+@input-border-radius-small:      0px; // @border-radius-small
 
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             @brand-primary;
 
 //** Placeholder text color
 @input-color-placeholder:        @gray-light;
@@ -871,15 +871,79 @@
 @hr-border:                   @gray-lighter;
 
 //--------------------------------------------------------------
+//== FlexSlider Variables
+//--------------------------------------------------------------
+
+@flexslider-font-name:                      "Glyphicons Halflings";
+@flexslider-margin:                         0;
+@flexslider-bg:                             transparent;
+@flexslider-border:                         none;
+@flexslider-border-radius:                  0;
+@flexslider-box-shadow-x-axis:              0;
+@flexslider-box-shadow-y-axis:              1px;
+@flexslider-box-shadow-blur:                4px;
+@flexslider-box-shadow-color:               rgba( 0, 0, 0, 0.2 );
+@flexslider-box-shadow-inset:               '';
+@flexslider-viewport-max-height:            700px;
+@flexslider-viewport-loading-max-height:    300px;
+@flexslider-control-thumbs:                 5px 0 0;
+
+@flexslider-nav-color:                      @white;
+@flexslider-nav-icon-color:                 @white;
+@flexslider-direction-nav-icon-prev:        '\e079';
+@flexslider-direction-nav-icon-next:        '\e080';
+
+@flexslider-pauseplay-icon-color:           @white;
+@flexslider-pauseplay-icon-play:            '\e072';
+@flexslider-pauseplay-icon-pause:           '\e073';
+
+//--------------------------------------------------------------
 //== Theme Variables
 //--------------------------------------------------------------
 
 //= Colors
+//
+//##
 @black:                 #000000;
 @white:                 #fff;
 @bg-primary:            @brand-primary;
 @bg-secondary:          #181818;
 
 //= Fonts
+//
+//##
 @font-family-Ubuntu: Ubuntu;
 @font-family-Raleway: Raleway;
+
+//== Buttons
+//
+//##
+
+//** Default `.btn` padding
+@btn-padding-base:              18px;
+//** Large `.btn` padding
+@btn-padding-large:             32px;
+//** Small `.btn` padding
+@btn-padding-small:             14px;
+
+//== Forms
+//
+//##
+
+@input-shadow-focus:              0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+//** Default `.form-control` padding
+@input-padding-base:              18px;
+//** Large `.form-control` padding
+@input-padding-large:             32px;
+//** Small `.form-control` padding
+@input-padding-small:             14px;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@input-padding-base * 2));
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@input-padding-large * 2));
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@input-padding-small * 2));
+//** Original `.form-control` height
+@input-height-original:          (@line-height-computed + (@padding-base-vertical * 2) + 2);

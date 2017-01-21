@@ -11,9 +11,26 @@
 
 .section {
   position: relative;
+  overflow-x: hidden;
 
   &.bg-primary {
     color: @white;
+
+    .list-progress {
+      li {
+        .list-progress-content {
+          border: 2px solid @white;
+
+          .icon {
+            border-bottom: 1px solid @white;
+          }
+
+          .list-progress-text {
+            color: @white;
+          }
+        }
+      }
+    }
   }
 
   &.bg-secondary {
@@ -22,6 +39,22 @@
 
   .bg-primary {
     color: @white;
+
+    .list-progress {
+      li {
+        .list-progress-content {
+          border: 2px solid @white;
+
+          .icon {
+            border-bottom: 1px solid @white;
+          }
+
+          .list-progress-text {
+            color: @white;
+          }
+        }
+      }
+    }
   }
 
   .bg-secondary {
@@ -30,6 +63,7 @@
 }
 
 .section-content {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -158,6 +192,24 @@
       background-image: url('../img/bg/3.jpg');
     }
   }
+
+  &.section-bg-5 {
+    &:before {
+      background-image: url('../img/bg/5.jpg');
+    }
+  }
+
+  &.section-bg-6 {
+    &:before {
+      background-image: url('../img/bg/6.jpg');
+    }
+  }
+
+  &.section-bg-9 {
+    &:before {
+      background-image: url('../img/bg/6.jpg');
+    }
+  }
 }
 
 //= Sections Top & Bottom drawing
@@ -177,11 +229,12 @@
     height: 80px;
     content: '';
     left: -70px;
-    box-shadow: 4px 1px 0 2px @body-bg;
+    .box-shadow(~"4px 1px 0 2px @{body-bg}");
     transform: skew(-58deg, 10deg);
     background-color: @bg-primary;
     z-index: 1;
   }
+
   &:after {
     position: absolute;
     top: -16px;
@@ -189,7 +242,7 @@
     height: 80px;
     content: '';
     right: -70px;
-    box-shadow: -4px 1px 0 2px @body-bg;
+    .box-shadow(~"-4px 1px 0 2px @{body-bg}");
     transform: skew(58deg, -10deg);
     background-color: @bg-primary;
   }
@@ -267,6 +320,7 @@
   top: 0;
   right: 0;
   left: 0;
+  padding-top: 3px;
   width: 100%;
   z-index: 1030;
   color: @white;
@@ -281,9 +335,19 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
+  @media (max-width: @grid-float-breakpoint-max) {
+    position: relative !important;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    &.affix-top.affix-home {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
   .navbar-autozone {
     position: relative;
-    margin-top: 3px;
     margin-bottom: 0px;
     background-color: transparent;
     border: none;
@@ -318,7 +382,7 @@
         &:focus {
           color: @white;
           background-color: transparent;
-          box-shadow: 0 -5px 0 0 @brand-primary;
+          .box-shadow(~"0 -5px 0 0 @{brand-primary}");
         }
       }
       > .active > a {
@@ -327,7 +391,7 @@
         &:focus {
           color: @white;
           background-color: transparent;
-          box-shadow: 0 -5px 0 0 @brand-primary;
+          .box-shadow(~"0 -5px 0 0 @{brand-primary}");
         }
       }
       > .disabled > a {
@@ -375,6 +439,10 @@
       .form-control {
         color: @white;
         background: transparent;
+
+        &:focus {
+          border-color: @white;
+        }
       }
 
       .btn {
@@ -514,8 +582,12 @@
         background-color: #222127;
         opacity: 0.5;
         transition: all 0.3s;
+
         &:hover {
           opacity: 1;
+          color: @brand-primary;
+          border-color: @brand-primary;
+          text-decoration: none;
         }
       }
     }

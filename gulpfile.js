@@ -111,11 +111,15 @@ elixir(function (mix) {
     // FontAwesome Fonts
     mix.copy(config.bowerPath + '/components-font-awesome/fonts/', config.publicPath + '/fonts/');
 
+    // FlexSlider Fonts
+    mix.copy(config.bowerPath + '/flexslider/fonts/', config.publicPath + '/fonts/');
 
     // JS
     mix.scripts([
         config.bowerPath + '/jquery/dist/jquery.js',
         config.bowerPath + '/bootstrap/dist/js/bootstrap.js',
+        config.bowerPath + '/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+        config.bowerPath + '/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it.min.js',
         config.bowerPath + '/nouislider/distribute/nouislider.js',
         config.bowerPath + '/isotope/dist/isotope.pkgd.js',
         config.bowerPath + '/jquery-form-validator/form-validator/jquery.form-validator.js',
@@ -125,6 +129,9 @@ elixir(function (mix) {
         config.bowerPath + '/wow/dist/wow.js',
         config.bowerPath + '/waypoints/lib/jquery.waypoints.js',
         config.bowerPath + '/flexslider/jquery.flexslider.js',
+        config.bowerPath + '/bootstrap-toggle/js/bootstrap-toggle.js',
+        config.bowerPath + '/js-marker-clusterer/src/markerclusterer.js',
+        config.bowerPath + '/object-fit-images/dist/ofi.browser.js',
         config.assetsPath + '/js/app.js',
     ], config.publicPath + '/js/app.js', '.')
         .header(
@@ -136,19 +143,6 @@ elixir(function (mix) {
         );
 
     //
-
-    // /*
-    //  * Theme
-    //  */
-    // // Less
-    // mix.less('app.less', config.publicPath + '/style.css')
-    //     .header(fs.readFileSync('HEADER', 'utf8'), config.publicPath + '/style.css', config.publicPath + '/style.css', config.publicPath);
-    // mix.less('rtl.less', config.publicPath + '/rtl.css')
-    //     .header(fs.readFileSync('HEADER', 'utf8'), config.publicPath + '/rtl.css', config.publicPath + '/rtl.css', config.publicPath);
-    //
-    // // JS
-    // mix.scripts('widget.js');
-    // mix.scripts('scripts.js');
 
     // Imgs & SVGs & Static
     mix.copy('src/img/', config.publicPath + '/img');

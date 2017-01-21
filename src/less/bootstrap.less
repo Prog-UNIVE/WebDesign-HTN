@@ -1,26 +1,135 @@
 /*
  * Bower Assets & Other
  */
-
 // Fonts
 @import "fonts.less";
 @import "../../bower_components/components-font-awesome/less/font-awesome.less";
-
 // Bootstrap
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 @import "../../bower_components/Yamm3/yamm/yamm.less";
-
 // Other stuff
 @import (inline) "../../bower_components/animate.css/animate.css";
 @import (inline) "../../bower_components/nouislider/distribute/nouislider.css";
 @import (inline) "../../bower_components/select2/dist/css/select2.css";
-@import "../../bower_components/flexslider/flexslider.less";
-
+@import "select2/layout.less";
+@import (inline) "../../bower_components/bootstrap-toggle/css/bootstrap-toggle.css";
+@import (inline) "../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css";
+@import "flexslider.less";
 // Custom Variables
 @import "variables.less";
 
-
 //= Customized Bootstrap Components
+
+//= Buttons
+.btn {
+  border: none;
+  .box-shadow(~"5px 0 0 0 @{gray}");
+  text-transform: uppercase;
+
+  &:hover {
+    color: @white;
+    background-color: @bg-secondary;
+  }
+}
+
+//= Form
+.form-control {
+  padding: @input-padding-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  border: none;
+  border-bottom: 1px solid transparent;
+
+  .box-shadow(none);
+
+  &:focus {
+    .box-shadow(@input-shadow-focus);
+  }
+}
+
+// Form control sizing
+.input-sm {
+  .input-size(@input-height-small; @input-padding-small; @input-padding-small; @font-size-small; @line-height-small; @input-border-radius-small);
+}
+
+.form-group-sm {
+  .form-control {
+    padding: @input-padding-small;
+  }
+  .form-control-static {
+    padding: (@input-padding-small + 1) @input-padding-small;
+  }
+}
+
+.input-lg {
+  .input-size(@input-height-large; @input-padding-large; @input-padding-large; @font-size-large; @line-height-large; @input-border-radius-large);
+}
+
+.form-group-lg {
+  .form-control {
+    padding: @input-padding-large;
+  }
+  .form-control-static {
+    padding: (@input-padding-large + 1) @input-padding-large;
+  }
+}
+
+//= Input groups
+// Sizing options
+//
+// Remix the default form control sizing classes into new ones for easier
+// manipulation.
+
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  .input-lg();
+}
+
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn {
+  .input-sm();
+}
+
+// Button input groups
+// -------------------------
+.input-group-btn {
+  > .btn {
+    padding: @input-padding-base;
+
+    + .btn {
+      margin-left: 5px;
+    }
+  }
+
+  &:first-child {
+    > .btn,
+    > .btn-group {
+      margin-right: 0px;
+    }
+  }
+  &:last-child {
+    > .btn,
+    > .btn-group {
+      margin-left: 0px;
+    }
+  }
+}
+
+//= Checkboxes
+
+.toggle {
+  border: 1px solid #555;
+  &.btn{
+    .box-shadow(none);
+  }
+
+  .btn{
+    .box-shadow(none);
+  }
+}
 
 //= Pagination
 .pagination {

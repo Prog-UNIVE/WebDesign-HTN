@@ -8,6 +8,35 @@
   padding-bottom: 50px;
   background-color: @white;
 
+  &.affix {
+    position: fixed;
+    top: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (min-width: @screen-md-min) {
+      width: 293px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      width: 360px;
+    }
+  }
+
+  &.affix-bottom {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (min-width: @screen-md-min) {
+      width: 293px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      width: 360px;
+    }
+  }
+
   .widget {
     padding: 26px 32px 16px;
 
