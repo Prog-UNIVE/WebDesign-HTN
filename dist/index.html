@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>NetCar</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/logo/favicon.ico"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page autozone file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<header class="header affix-home">
+    <nav class="navbar navbar-fixed-top navbar-autozone yamm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="img/logo/NC.png">
+                </a>
+                <button type="button" class="navbar-toggle collapsed text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="text-center" href="./">Home</a></li>
+                    <li><a class="text-center" href="news.html">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="what-is-carshare.html">Cos' è</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="how-to-book.html">Prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="generic.html">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="generic.html">Carburante</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="services.html">Servizi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li><a class="text-center" href="our-cars.html">Flotta</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="login.html">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="signup-step-1.html">Registrazione</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            <span class="sr-only">Cerca</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <form action="search.html" method="get" class="form-search">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="search">Search</label>
+                                            <input id="search" class="form-control"
+                                                   placeholder="Cerca..." type="text">
+                                        </div>
+                                        <button class="btn btn-default form-search__submit" type="submit">
+                                            <i class="icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="flexslider main-slider block-title">
+        <ul class="slides">
+            <li>
+                <img src="./img/index/slider/slide-4.jpg" alt="img"/>
+                <div class="flex-caption text-left animate fadeInRight">
+                    <a class="main-slider-btn" href="javascript:void(0);">
+                        <span>the all new</span>
+                    </a>
+                    <div class="main-slider-title">2016 Acura ILX</div>
+                    <div class="main-slider-subtitle">High Performance & Outstanding Technology Combined</div>
+                    <div class="decor decor-1"></div>
+                    <div class="main-slider-body">Starts from</div>
+                    <div>
+                        <span class="main-slider-price">$35,290</span>
+                        <a class="main-slider-link" href="javascript:void(0);">
+                            <i class="icon fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./img/index/slider/slide-1.jpg" alt="img"/>
+                <div class="flex-caption text-left animate fadeInRight">
+                    <a class="main-slider-btn" href="javascript:void(0);">
+                        <span>the all new</span>
+                    </a>
+                    <div class="main-slider-title">2016 Acura ILX</div>
+                    <div class="main-slider-subtitle">High Performance & Outstanding Technology Combined</div>
+                    <div class="decor decor-1"></div>
+                    <div class="main-slider-body">Starts from</div>
+                    <div>
+                        <span class="main-slider-price">$35,290</span>
+                        <a class="main-slider-link" href="javascript:void(0);">
+                            <i class="icon fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./img/index/slider/slide-2.jpg" alt="img"/>
+                <div class="flex-caption text-left animate fadeInRight">
+                    <a class="main-slider-btn" href="javascript:void(0);">
+                        <span>the all new</span>
+                    </a>
+                    <div class="main-slider-title">2016 Acura ILX</div>
+                    <div class="main-slider-subtitle">High Performance & Outstanding Technology Combined</div>
+                    <div class="decor decor-1"></div>
+                    <div class="main-slider-body">Starts from</div>
+                    <div>
+                        <span class="main-slider-price">$35,290</span>
+                        <a class="main-slider-link" href="javascript:void(0);">
+                            <i class="icon fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./img/index/slider/slide-3.jpg" alt="img"/>
+                <div class="flex-caption text-left animate fadeInRight">
+                    <a class="main-slider-btn" href="javascript:void(0);">
+                        <span>the all new</span>
+                    </a>
+                    <div class="main-slider-title">2016 Acura ILX</div>
+                    <div class="main-slider-subtitle">High Performance & Outstanding Technology Combined</div>
+                    <div class="decor decor-1"></div>
+                    <div class="main-slider-body">Starts from</div>
+                    <div>
+                        <span class="main-slider-price">$35,290</span>
+                        <a class="main-slider-link" href="javascript:void(0);">
+                            <i class="icon fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="section section-bg section-bg-1">
+    <div class="container section-content">
+        <div class="row link-block-container">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-md-push-4 wow bounceInUp">
+                <div class="text-center">
+                    <p class="lead">Benvenuti su</p>
+                    <div class="decor decor-1 center-block"></div>
+                    <h1 class="section-title">
+                        <span class=" text-primary">NetCar</span>
+                        <br>
+                        <small>Il carsharing 2.0</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4 col-md-pull-4 wow bounceInLeft">
+                <img src="img/index/front-left.png" alt="Foto" class="img-responsive">
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4 wow bounceInRight">
+                <img src="img/index/front-right.png" alt="Foto" class="img-responsive">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 wow bounceInLeft">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="col-sm-6 wow bounceInRight">
+                <h2 class="section-title-inner">Caratteristiche principali</h2>
+                <div class="decor decor-1"></div>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i> Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="section-link-brand text-center" href="our-cars.html">
+                    <i class="icon fa fa-caret-right"></i>
+                    I NOSTRI VEICOLI
+                    <i class="icon fa fa-caret-left"></i>
+                    <div class="decor decor-1 decor-1_mod-b"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section wow bounceInUp">
+    <div class="section-top">
+        <div class="section-bg section-bg-cover section-bg-3 bg-secondary">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2 class="section-title">I nostri numeri</h2>
+                        <div class="section-subtitle">Abbiamo dei dati interessanti</div>
+                        <ul class="list-unstyled list-inline list-progress text-center">
+                            <li class="col-xs-12 col-sm-6 col-lg-3">
+                                <div class="list-progress-content">
+                                    <div class="icon">
+                                        <i class="fa fa-4x fa-building" aria-hidden="true"></i>
+                                        <span class="chart" data-percent="10"><span class="percent"></span></span>
+                                    </div>
+                                    <span class="list-progress-text">Città</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-lg-3">
+                                <div class="list-progress-content">
+                                    <div class="icon">
+                                        <i class="fa fa-4x fa-users" aria-hidden="true"></i>
+                                        <span class="chart" data-percent="10000"><span
+                                                class="percent"></span>+</span>
+                                    </div>
+                                    <span class="list-progress-text">Clienti</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-lg-3">
+                                <div class="list-progress-content">
+                                    <div class="icon">
+                                        <i class="fa fa-4x fa-car" aria-hidden="true"></i>
+                                        <span class="chart" data-percent="2500"><span
+                                                class="percent"></span>+</span>
+                                    </div>
+                                    <span class="list-progress-text">Veicoli</span>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-lg-3">
+                                <div class="list-progress-content">
+                                    <div class="icon">
+                                        <i class="fa fa-4x fa-plug" aria-hidden="true"></i>
+                                        <span class="chart" data-percent="60"><span class="percent"></span>+</span>
+                                    </div>
+                                    <span class="list-progress-text">Punti di ricarica</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-bottom">
+                    <div class="section-bottom-parallelogram"></div>
+                    <div class="section-bottom-triangle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section wow bounceInUp">
+    <div class="container section-content">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="section-title">Servizi</h2>
+                <span class="section-subtitle">I servizi pensati per il guidatore</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariaturenim ad minim veniam, quis nostrud
+                    exercitation ullamco.
+                </p>
+                <p>
+                    <a href="services.html#accessibility" class="section-link"> Guarda anche il nostro servizio per
+                        i
+                        diversamente abili</a>.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="section-title-inner">In città:</h2>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
+                        <strong> Parcheggi:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
+                        <strong> Accessi ZTL:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
+                        <strong> Ristorazione:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </li>
+                    <li>
+                        <i class="decor decor-3 fa fa-caret-right"></i>
+                        <strong> Carburante/Ricarica:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="section-link-brand text-center" data-wow-duration="2s"
+                   href="what-is-carshare.html">
+                    <i class="icon fa fa-caret-right"></i>
+                    Premi per approfondire
+                    <i class="icon fa fa-caret-left"></i>
+                    <div class="decor decor-1 decor-1_mod-b"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-bg section-bg-left section-bg-2 wow bounceInUp">
+    <div class="container section-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="section-title">Chi siamo</h2>
+                <span class="section-subtitle section-subtitle-small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum.
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <h3 class="">Un nome di fiducia nel mondo del carsharing</h3>
+                <div>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum. Maecenas
+                        vehicula pharetra velit eget tristique. Interdum et malesuada fames ac ante ipsum primis in
+                        faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                        Curae
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum. Maecenas
+                        vehicula pharetra velit eget tristique. Interdum et malesuada fames ac ante ipsum primis in
+                        faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                        Curae
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus ipsum. Maecenas
+                        vehicula pharetra velit eget tristique. Interdum et malesuada fames ac ante ipsum primis in
+                        faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                        Curae
+                    </p>
+                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="about-us.html" class="section-link"><h4>Scopri di più sul nostro team</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-7">
+                <img src="img/bg/10.png" alt="Foto" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-bg section-bg-cover section-bg-6 bg-secondary wow bounceInUp">
+    <div class="container section-content">
+        <h2 class="section-title text-center">Contattaci</h2>
+        <p class="text-justify">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+            Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Donec in rutrum odio, sit amet cursus sem. Vivamus ullamcorper urna id pretium scelerisque.</p>
+        <p class="text-center">
+            <a class="btn btn-primary btn-lg" href="contact-us.html" role="button">Inviaci un messaggio</a>
+        </p>
+    </div>
+</section>
+
+<section class="section section-content">
+    <div class="row text-center">
+        <div class="col-xs-10 col-sm-4 col-xs-push-1 col-sm-push-2">
+            <h2 class="section-title">TAG News</h2>
+            <a href="#" class="text-danger">Acquisto</a>
+            <a href="#" class="text-success">BMW</a>
+            <a href="#" class="text-muted">Assicurazione</a>
+            <a href="#" class="text-primary">Audi</a>
+            <a href="#" class="text-success">Parcheggi</a>
+            <a href="#" class="text-primary">FIAT</a>
+            <a href="#" class="text-success">Carburante</a>
+            <a href="#" class="text-primary">Sharing</a>
+            <a href="#" class="text-muted">Tesla</a>
+            <a href="#" class="text-primary">Alfa Romeo</a>
+            <a href="#" class="text-danger">Deposito</a>
+            <a href="#" class="text-danger">Top Macchine Usate</a>
+            <a href="#" class="text-muted">Sport</a>
+            <a href="#" class="text-success">Tariffe</a>
+            <a href="#" class="text-danger">Costi</a> 
+            <a href="#" class="text-primary">Mobile</a>
+            <a href="#" class="text-muted">Agevolazioni</a>
+            <a href="#" class="text-primary">Prenotazione</a>
+            <a href="#" class="text-primary">Car</a>
+            <a href="#" class="text-success">App</a>
+            <a href="#" class="text-muted">ZTL</a>
+            <a href="#" class="text-danger">Macchina</a>
+        </div>
+        <div class="col-xs-10 col-sm-4 col-xs-push-1 col-sm-push-2">
+            <h2 class="section-title">Ricerca per TAG</h2>
+            <form role="form" action="search-tag.html">
+                <div class="input-group">
+                    <label for="tag" class="sr-only"></label>
+                    <input type="text" name="tag" id="tag" class="form-control" placeholder="Cerca...">
+                    <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Cerca</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer wow bounceInUp" data-wow-duration="2s">
+    <section class="section section-content bg-secondary footer-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="footer-title">Net <span class="text-primary">Car</span></h2>
+                    <div class="decor-1 decor-1_mod-b"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-secondary">: Sede uffici :</p>
+                    <p>Via Torino 155, Mestre 30172 (VE), Veneto, Italia</p>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <ul class="col-xs-12 list-inline">
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
+                        1234567@gmail.com
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Orario:</span> Lun-Ven ::
+                        9-18
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="social-links list-inline">
+                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
+                        </li>
+                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact-us.html"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="index-map.html"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="top">
+        <div class="top-container">
+            <a class="text-center scroll" href="#body-top">
+                <div class="top-triangle"></div>
+                <span>Top</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyrights © 2015 - 2016 <a class="" href="index.html">NetCar</a> - Tutti i diritti riservati
+    </div>
+</footer>
+
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
+</body>
+</html>

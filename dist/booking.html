@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Prenotazione</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page autozone file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body-top" class="layout-theme animated-css">
+<!-- Top menu -->
+<header class="header no-affix">
+    <nav class="navbar navbar-fixed-top navbar-autozone yamm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="img/logo/NC.png">
+                </a>
+                <button type="button" class="navbar-toggle collapsed text-center"
+                        data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li><a class="text-center" href="./">Home</a></li>
+                    <li><a class="text-center" href="news.html">News</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Come funziona<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="what-is-carshare.html">Cos' è</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="how-to-book.html">Prenotazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="generic.html">Assicurazione</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="generic.html">Carburante</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="services.html">Servizi</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a class="text-center" href="booking.html">Prenotazione</a></li>
+                    <li><a class="text-center" href="our-cars.html">Flotta</a></li>
+                    <li><a class="text-center" href="about-us.html">Chi siamo</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Area riservata<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-center" href="login.html">Login-in</a></li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="signup-step-1.html">Registrazione</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-center" aria-expanded="true">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            <span class="sr-only">Cerca</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <form action="search.html" method="get" class="form-search">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="search">Search</label>
+                                            <input id="search" class="form-control"
+                                                   placeholder="Cerca..." type="text">
+                                        </div>
+                                        <button class="btn btn-default form-search__submit" type="submit">
+                                            <i class="icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="block-title">
+        <div class="section-bg section-bg-cover section-bg-3 bg-secondary">
+            <div class="block-title-content">
+                <h1 class="block-title-title">Prenotazione</h1>
+                <div class="decor decor-1 center-block"></div>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">home</a></li>
+                    <li class="active">prenotazione</li>
+                </ol>
+            </div><!-- end block-title-content -->
+        </div>
+    </div><!-- end block-title -->
+</section>
+
+<section>
+    <div class="container card">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h1 class="panel-title">Filtra veicoli</h1>
+                            <strong class="small">200 Veicoli disponibili</strong>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            Più filtri:
+                            <a href="#filter-toggle" class="btn btn-primary" type="button" data-toggle="collapse"><i
+                                    class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="input-group">
+                        <label for="pac-input" class="sr-only"></label>
+                        <input name="location" id="pac-input" class="form-control" placeholder="Località"
+                               type="text">
+                        <span class="input-group-btn"><button id="pac-button" class="btn btn-primary"
+                                                              type="submit">Cerca</button></span>
+                    </div>
+                </div>
+
+                <div id="filter-toggle" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="headingOne">
+                    <div class="panel-body form-horizontal">
+                        <div class="row">
+                            <form>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label>BMW i8</label>
+                                            <span class="help-block">12 Veicoli disponibili</span>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="bmw" name="bmw" checked data-toggle="toggle" type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label>Tesla P100D</label>
+                                            <span class="help-block">7 Veicoli disponibili</span>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="tesla" name="tesla" checked data-toggle="toggle" type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label>Audi A3 e-tron</label>
+                                            <span class="help-block">53 Veicoli disponibili</span>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="audi-a3" name="audi-a3" checked data-toggle="toggle"
+                                                   type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label>Golf GTE</label>
+                                            <span class="help-block">89 Veicoli disponibili</span>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="gte" name="gte" checked data-toggle="toggle" type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label for="seggiolino">Seggiolino</label>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="seggiolino" name="seggiolino" checked data-toggle="toggle"
+                                                   type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label for="auto-gearbox">Cambio automatico</label>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <input id="auto-gearbox" name="gearbox" checked data-toggle="toggle"
+                                                   type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-wrapper map-container">
+    <div id="map" class="map"></div>
+</section>
+
+<section class="section section-content bg-primary text-center">
+    <h2 class="section-title">Hai bisogno di aiuto?</h2>
+    <p><a class="btn btn-default btn-lg" href="faq.html" role="button">Guarda sulle FAQ</a></p>
+</section>
+
+<footer class="footer wow bounceInUp" data-wow-duration="2s">
+    <section class="section section-content bg-secondary footer-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="footer-title">auto <span class="text-primary">zone</span></h2>
+                    <div class="decor-1 decor-1_mod-b"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-secondary">: Sede uffici :</p>
+                    <p>Via Torino 155, Mestre 30172 (VE), Veneto, Italia</p>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <ul class="col-xs-12 list-inline">
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Telefono:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Fax:</span> 1234567</li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Email:</span>
+                        1234567@gmail.com
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-3"><span class="footer-special">Orario:</span> Lun-Ven ::
+                        9-18
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="social-links list-inline">
+                        <li><a class="icon fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                        <li><a class="icon fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                        <li><a class="icon fa fa-youtube-play" href="#"><span class="sr-only">YouTube</span></a>
+                        </li>
+                        <li><a class="icon fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact-us.html"><i class="fa fa-phone"></i> Contattaci</a></li>
+                        <li><a href="index-map.html"><i class="fa fa-map-signs"></i> Mappa del Sito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="top">
+        <div class="top-container">
+            <a class="text-center scroll" href="#body-top">
+                <div class="top-triangle"></div>
+                <span>Top</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyrights © 2015 - 2016 <a class="" href="index.html">NetCar</a> - Tutti i diritti riservati
+    </div>
+</footer>
+
+<div id="booking-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Prenotazione</h4>
+            </div>
+            <div class="modal-body">
+                <p>Hai scelto di prenotare il veicolo xyz.</p>
+                <form class="form-horizontal">
+                    <p>Scegli la data di ritiro e di consegna</p>
+                    <p class="help-block">Ti ricordiamo che puoi prenotare a partire da domani</p>
+                    <div class="form-group">
+                        <label for="pickupDate" class="col-sm-2 control-label">Data Ritiro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="datepicker form-control" id="pickupDate" placeholder="GG/MM/AAAA">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate" class="col-sm-2 control-label">Data Rientro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="datepicker form-control" id="endDate" placeholder="GG/MM/AAAA">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <a href="history.html" type="button" class="btn btn-primary">Save changes</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- jQuery, Bootstrap's and other JavaScript plugins) -->
+<script src="js/app.js"></script>
+
+<script>
+
+    function MapControl(controlDiv, map) {
+        // Set the center property upon construction
+        //control.center_ = center;
+        controlDiv.css('clear', 'both');
+
+        // Set CSS for the control border
+        var zoomPlusBtn = $(document.createElement('button')).addClass('btn btn-default').attr('type', 'button').html('<i class="fa fa-plus"></i>');
+        var zoomMinusBtn = $(document.createElement('button')).addClass('btn btn-default').attr('type', 'button').html('<i class="fa fa-minus"></i>');
+        var locateBtn = $(document.createElement('button')).addClass('btn btn-default').attr('type', 'button').html('<i class="fa fa-location-arrow"></i>');
+
+        controlDiv.append(zoomPlusBtn);
+        controlDiv.append(locateBtn);
+        controlDiv.append(zoomMinusBtn);
+
+        zoomPlusBtn.click(function () {
+            console.log('BtnZoom Plus');
+            $(this).unbind('active');
+
+            if ((map.getZoom() + 1) > map.maxZoom) {
+                console.log('BtnZoom Overflow');
+                $(this).attr('disabled', 'disabled');
+            } else {
+                zoomMinusBtn.removeAttr('disabled');
+                map.setZoom(map.getZoom() + 1);
+            }
+        });
+
+        zoomMinusBtn.click(function () {
+            console.log('BtnZoom Minus');
+            $(this).unbind('active');
+
+            if ((map.getZoom() - 1) < map.minZoom) {
+                console.log('BtnZoom Overflow');
+                $(this).attr('disabled', 'disabled');
+            } else {
+                zoomPlusBtn.removeAttr('disabled');
+                map.setZoom(map.getZoom() - 1);
+            }
+        });
+
+        locateBtn.click(function () {
+            console.log('Btn Locate User');
+            $(this).unbind('active');
+            geolocateUser(map);
+        });
+    }
+
+    function geolocateUser(map, userMarker) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                map.setCenter(latlng);
+
+                if (userMarker == null) {
+                    console.log('Crete user location marker');
+                    userMarker = new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                        icon: './img/gmaps/marker_user_position.png'
+                    });
+                } else {
+                    console.log('Update user location marker');
+                    userMarker.setPosition(latlng);
+                }
+            }, function () {
+                console.log("Browser geolocation not working!");
+                if (userMarker != null) {
+                    console.log('Delete user location marker');
+                    userMarker.setMap(null);
+                }
+            });
+        } else {
+            console.log("Browser geolocation not supported!");
+            if (userMarker != null) {
+                console.log('Delete user location marker');
+                userMarker.setMap(null);
+            }
+        }
+    }
+
+
+    function initMap() {
+
+        var gmap;
+        var gmapControl;
+        var userMarker = null;
+        var carMarkers;
+
+        var mapCanvas = $('#map');
+        var input = $('#pac-input');
+        var button = $('#pac-button');
+        var modal = $('#booking-modal').modal({
+            keyboard: false,
+            show: false
+        });
+
+        var mcOptions = {
+            gridSize: 54,
+            ignoreHidden: true,
+            averageCenter: true,
+            styles: [
+                {
+                    url: './img/gmaps/marker_cluster.png',
+                    height: 54,
+                    width: 54,
+                    textColor: '#ffffff',
+                    textSize: 10
+                }
+            ],
+            calculator: function (markers, numStyles) {
+
+                var index = 0;
+                var title = "";
+                var count = markers.length;
+
+                index = 1;
+
+                index = Math.min(index, numStyles);
+
+                return {
+                    text: count.toString(),
+                    index: index,
+                    title: title
+                };
+            }
+        };
+
+        gmap = new google.maps.Map(mapCanvas[0], {
+            center: {lat: 45.43750, lng: 12.33583},
+            zoom: 12,
+            disableDefaultUI: true,
+            minZoom: 4,
+            maxZoom: 16
+        });
+
+        // Set custom crontrols on map
+        var centerControlDiv = $(document.createElement('div')).addClass('btn-group btn-group-lg map-controls');
+        gmapControl = new MapControl(centerControlDiv, gmap);
+        gmap.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv[0]);
+
+        // Try HTML5 geolocation.
+        geolocateUser(gmap, userMarker);
+
+        var searchBox = new google.maps.places.SearchBox(input[0]);
+        searchBox.addListener('places_changed', function () {
+            var places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+                return;
+            }
+
+            // For each place, get the location.
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function (place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            gmap.fitBounds(bounds);
+        });
+
+        input.keypress(function (e) {
+            if (e.which == 13) {
+                google.maps.event.trigger(searchBox, 'places_changed');
+                return false;
+            }
+        });
+
+        button.click(function () {
+            input.focus();
+        });
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        carMarkers = carLocations.map(function (location, i) {
+            var marker = new google.maps.Marker({
+                position: location,
+                icon: './img/gmaps/marker_car.png'
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                console.log("Car marker click");
+                modal.modal('show');
+            });
+
+            return marker;
+        });
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(gmap, carMarkers, mcOptions);
+    }
+
+    var carLocations = [
+        {lat: 45.4863945, lng: 12.238000899999975},
+        {lat: 45.4844572, lng: 12.242627200000015},
+        {lat: 45.4890829, lng: 12.24598119999996},
+        {lat: 45.4858398, lng: 12.25635729999999},
+        {lat: 45.4818274, lng: 12.258516500000042},
+        {lat: 45.4804641, lng: 12.249414900000033},
+        {lat: 45.4756248, lng: 12.252206099999967},
+        {lat: 45.4799769, lng: 12.24689710000007},
+        {lat: 45.4821081, lng: 12.280057800000009},
+        {lat: 45.4885905, lng: 12.273399299999937},
+        {lat: 45.4928754, lng: 12.26418250000006},
+        {lat: 45.4977086, lng: 12.265673099999958},
+        {lat: 45.4980200, lng: 12.286122200000023},
+        {lat: 45.4813118, lng: 12.272855100000015},
+        {lat: 45.4819454, lng: 12.291124099999934},
+
+        {lat: 45.4450245, lng: 9.158608400000048},
+        {lat: 45.4417436, lng: 9.15292020000004},
+        {lat: 45.4448853, lng: 9.150807100000065},
+        {lat: 45.4521969, lng: 9.157800100000031},
+        {lat: 45.4539982, lng: 9.172729200000049},
+        {lat: 45.4585959, lng: 9.17348400000003},
+        {lat: 45.4551948, lng: 9.178736999999956},
+        {lat: 45.4554126, lng: 9.190073999999981},
+        {lat: 45.4541691, lng: 9.192984900000056},
+        {lat: 45.4529027, lng: 9.193885899999941},
+        {lat: 45.4558893, lng: 9.20258560000002},
+        {lat: 45.4635047, lng: 9.202783899999986},
+        {lat: 45.4723574, lng: 9.210651600000006},
+        {lat: 45.4788620, lng: 9.19002039999998},
+        {lat: 45.4833578, lng: 9.183012299999973},
+        {lat: 45.4862079, lng: 9.161885299999994},
+    ]
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDax0fW4hGXS7pqUS4HDa-0itmNBat4PCE&libraries=places"></script>
+</body>
+</html>
